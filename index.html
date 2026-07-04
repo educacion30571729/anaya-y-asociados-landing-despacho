@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- ===========================================================
-         HOJA DE ESTILOS MAESTRA: CRO 3.1 & EXECUTIVE BORCELLE STYLE
+         HOJA DE ESTILOS MAESTRA: CRO 4.0 & DISEÑO DE AUTOR
     =========================================================== -->
     <style>
         :root {
@@ -79,7 +79,6 @@
             margin: auto;
         }
 
-        /* Tipografía Editorial Serif para Títulos */
         h1, h2, h3, h4 {
             font-family: "Playfair Display", serif;
             font-weight: 700;
@@ -87,7 +86,6 @@
             line-height: 1.25;
         }
 
-        /* Justificación Editorial Universal en Escritorio */
         p {
             color: var(--text-gray);
             font-size: 17px;
@@ -115,7 +113,7 @@
         }
 
         /* ===========================================================
-             SISTEMA DE BOTONES CRO (TRÍADA DE ACCIÓN)
+             SISTEMA DE BOTONES CRO
         =========================================================== */
         .btn-group {
             display: flex;
@@ -163,17 +161,6 @@
             transform: translateY(-3px);
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--gold);
-            color: var(--white);
-        }
-        .btn-outline:hover {
-            background: var(--gold);
-            color: var(--navy);
-            transform: translateY(-3px);
-        }
-
         /* ===========================================================
              HEADER & NAVEGACIÓN FIJA
         =========================================================== */
@@ -201,17 +188,20 @@
             justify-content: space-between;
         }
 
+        /* DISEÑO DE AUTOR: Logotipo Dorado con Contorno Negro */
         .logo {
-            font-size: 26px;
-            font-weight: 700;
+            font-size: 28px;
+            font-weight: 800;
             font-family: "Playfair Display", serif;
-            color: var(--white);
+            color: var(--gold);
             text-decoration: none;
             letter-spacing: .5px;
+            /* Contorno Negro Elegante */
+            text-shadow: 1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 0px 5px 15px rgba(0,0,0,0.8);
         }
 
         .logo span {
-            color: var(--gold);
+            color: var(--gold); /* Todo en oro para mantener la uniformidad */
         }
 
         .menu {
@@ -546,7 +536,7 @@
         }
 
         /* ===========================================================
-             6. ¿POR QUÉ CONFIAR EN NOSOTROS?
+             6. ¿POR QUÉ CONFIAR EN NOSOTROS? (RESPALDO 3 FIRMAS)
         =========================================================== */
         .trust-section {
             background: var(--navy);
@@ -880,7 +870,7 @@
         }
 
         /* ===========================================================
-             SISTEMA CRO RESPONSIVE: CIRUGÍA 3.1 PRO (MÓVIL)
+             SISTEMA CRO RESPONSIVE: DISEÑO MÓVIL EXACTO AL BOCETO
         =========================================================== */
         @media(max-width: 1100px) {
             .hero-grid, .video-grid, .contact-grid {
@@ -908,18 +898,19 @@
             section {
                 padding: 60px 0;
             }
-            /* ENCABEZADO MÓVIL: Una sola línea limpia y sin teléfono */
+            /* 1. ENCABEZADO MÓVIL: Logo dorado, grande, con contorno en 1 sola línea */
             .navbar {
                 height: 75px;
                 justify-content: center !important;
             }
             .logo {
-                font-size: 24px !important;
-                white-space: nowrap !important; /* Garantiza que Anaya y Asociados esté en una sola línea */
+                font-size: 25px !important;
+                white-space: nowrap !important;
             }
             .contact-nav {
-                display: none !important; /* Oculta el teléfono del encabezado en celular */
+                display: none !important;
             }
+            
             .hero {
                 padding-top: 95px !important;
                 padding-bottom: 30px !important;
@@ -928,95 +919,88 @@
             .hero-grid {
                 display: flex !important;
                 flex-direction: column !important;
-                gap: 18px !important;
+                gap: 15px !important;
             }
-            /* 1. RECTÁNGULO DE PERFIL: Más alto, foto a la derecha y texto recorrido */
+            
+            /* 2. FOTO INDEPENDIENTE Y PROTAGONISTA EN CELULAR */
             .hero-photo {
                 order: -1 !important;
                 width: 100% !important;
                 display: flex !important;
-                flex-direction: row-reverse !important; /* Foto alineada al lado derecho */
+                flex-direction: column !important; /* Apila foto y texto verticalmente */
                 align-items: center !important;
-                justify-content: space-between !important;
-                background: linear-gradient(135deg, #0C1E36, #06101E) !important;
-                padding: 26px 20px !important; /* Rectángulo de mayor altura y respiración */
-                border-radius: 20px !important;
-                border: 1px solid var(--gold) !important;
-                box-shadow: 0 15px 35px rgba(0,0,0,0.5) !important;
-                gap: 16px !important;
+                background: transparent !important; /* Quitamos el recuadro combinado */
+                padding: 0 !important;
+                border: none !important;
+                box-shadow: none !important;
                 margin-bottom: 5px !important;
             }
-            /* Foto de 90x90px al lado derecho con anillo dorado */
             .hero-photo img {
-                width: 90px !important;
-                height: 90px !important;
-                min-width: 90px !important;
+                width: 120px !important; /* Foto grande circular */
+                height: 120px !important;
                 border-radius: 50% !important;
                 object-fit: cover !important;
                 object-position: top center !important;
-                border: 2.5px solid var(--gold) !important;
-                box-shadow: 0 0 15px rgba(201,162,77,0.4) !important;
-                margin: 0 !important;
+                border: 3.5px solid var(--gold) !important;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.6) !important;
+                margin-bottom: 18px !important; /* Separación entre foto y tarjeta */
             }
-            /* Contenedor de texto recorrido un poco más a la derecha */
+            
+            /* 3. TARJETA AMPLIA CON TEXTO JUSTIFICADO */
             .hero-card {
-                margin: 0 !important;
-                padding: 0 0 0 10px !important; /* Recorrido a la derecha */
-                background: transparent !important;
-                border: none !important;
-                box-shadow: none !important;
+                background: linear-gradient(135deg, #0C1E36, #06101E) !important;
+                padding: 22px 20px !important;
+                border-radius: 18px !important;
+                border: 1px solid var(--border-gold) !important;
+                box-shadow: var(--shadow-sm) !important;
                 width: 100% !important;
-                flex: 1 !important;
+                margin: 0 !important;
             }
-            /* Nombre centrado y con ortografía/mayúsculas corregidas */
             .hero-card h4 {
-                font-size: 16.5px !important;
-                margin-bottom: 6px !important;
+                font-size: 18px !important;
+                margin-bottom: 10px !important;
                 color: var(--white) !important;
                 line-height: 1.25 !important;
-                text-align: center !important; /* Alineación centrada para el nombre */
+                text-align: center !important; /* Nombre centrado */
             }
-            /* Descripción conserva alineación izquierda */
             .hero-card p {
-                font-size: 12px !important;
-                line-height: 1.45 !important;
-                text-align: left !important;
+                font-size: 13.5px !important;
+                line-height: 1.55 !important;
+                text-align: justify !important; /* Texto justificado como solicitaste */
                 color: var(--text-gray) !important;
             }
             .hero-tag {
                 display: none !important;
             }
-            /* Título Gancho */
+            
+            /* TÍTULO GANCHO */
             .hero h1 {
                 font-size: 25px !important;
                 line-height: 1.25 !important;
                 margin-bottom: 16px !important;
                 text-align: left !important;
             }
-            /* Botones en Cuadrícula Ergonomica */
+            
+            /* 4. BOTONES MÓVIL (DÚO: WhatsApp y Llamar solamente) */
             .btn-group {
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
-                gap: 10px !important;
+                gap: 12px !important;
                 width: 100% !important;
                 margin-bottom: 20px !important;
             }
             .btn {
                 width: 100% !important;
-                padding: 14px 8px !important;
-                font-size: 13.5px !important;
+                padding: 16px 10px !important;
+                font-size: 14.5px !important;
                 border-radius: 12px !important;
                 gap: 8px !important;
-            }
-            .btn-outline {
-                grid-column: span 2 !important;
-                padding: 12px !important;
-                font-size: 14px !important;
             }
             .hero p.desktop-desc {
                 display: none !important;
             }
-            /* GANCHO DE EMPATÍA EN TARJETA (Puente visual al scroll) */
+            
+            /* 5. GANCHO DE EMPATÍA (Puente visual al scroll) */
             .mobile-empathy-card {
                 display: block !important;
                 background: var(--card-bg) !important;
@@ -1040,9 +1024,10 @@
                 font-size: 14.5px !important;
                 line-height: 1.65 !important;
                 color: var(--white) !important;
-                text-align: left !important;
+                text-align: left !important; /* Facilita la lectura rápida */
                 margin-bottom: 0 !important;
             }
+            
             .empathy-section {
                 display: none !important;
             }
@@ -1073,6 +1058,7 @@
     =========================================================== -->
     <header>
         <div class="container navbar">
+            <!-- Logotipo Dorado con Contorno Negro -->
             <a href="#inicio" class="logo">Anaya <span>y Asociados</span></a>
             <ul class="menu">
                 <li><a href="#inicio">Inicio</a></li>
@@ -1110,16 +1096,13 @@
                     Cuando más lo necesitas, <strong class="gold">la estrategia correcta</strong> puede cambiarlo todo.
                 </h1>
                 
-                <!-- Tríada de Botones en Cuadrícula para Celular -->
+                <!-- DÚO DE BOTONES: WhatsApp y Llamar -->
                 <div class="btn-group">
                     <a class="btn btn-gold" href="https://wa.me/525532382924?text=Quiero%20hablar%20con%20un%20abogado" target="_blank">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                     <a class="btn btn-navy" href="tel:5532382924">
                         <i class="fa-solid fa-phone"></i> Llamar
-                    </a>
-                    <a class="btn btn-outline" href="#contacto">
-                        <i class="fa-solid fa-calendar-check"></i> Agendar una consulta
                     </a>
                 </div>
 
@@ -1128,7 +1111,7 @@
                     Te ayudamos a entender tu situación y a defender tus derechos con claridad, experiencia y compromiso. Más de 18 años de trayectoria y respaldo institucional como Ex Fiscal Especializado en el Estado de México y toda la República Mexicana.
                 </p>
 
-                <!-- TARJETA DE EMPATÍA MÓVIL (Tu idea de oro integrado en el Top) -->
+                <!-- TARJETA DE EMPATÍA MÓVIL -->
                 <div class="mobile-empathy-card">
                     <h3>¿Detuvieron a un familiar?<br>¿Estás pasando por una situación complicada?</h3>
                     <p>
@@ -1144,15 +1127,13 @@
                 </div>
             </div>
 
-            <!-- Columna Derecha en PC / Tarjeta Súper Compacta con Foto a la Derecha en Móvil -->
+            <!-- Columna Derecha en PC / DISEÑO MÓVIL EXACTO AL BOCETO -->
             <div class="hero-photo">
                 <img src="assets/img/aurelio-anaya.webp" alt="Lic. Aurelio De La Cruz Anaya">
                 <div class="hero-card">
                     <h4>Lic. Aurelio De La Cruz Anaya</h4>
                     <p>
-                        Socio Director | <strong>Anaya y Asociados</strong>.<br>
-                        Ex Fiscal Especializado y Ex Agente del MP.<br>
-                        Co-Fundador Lozano Guzmán y LAM Abogados.
+                        Socio Director de <strong>Anaya y Asociados</strong>. Ex Fiscal Especializado y Ex Agente del Ministerio Público. Socio Fundador de Lozano Guzmán Abogados y LAM Abogados.
                     </p>
                 </div>
             </div>
@@ -1508,7 +1489,7 @@
     </section>
 
     <!-- ===========================================================
-         10. LLAMADO FINAL A LA ACCIÓN & CONTACTO DIRECTO
+         10. LLAMADO FINAL & CONTACTO
     =========================================================== -->
     <section class="cta-final" id="contacto">
         <div class="container">
@@ -1522,9 +1503,6 @@
                 </a>
                 <a class="btn btn-navy" href="tel:5532382924">
                     <i class="fa-solid fa-phone"></i> Llamar ahora
-                </a>
-                <a class="btn btn-outline" href="https://wa.me/525532382924?text=Quiero%20agendar%20una%20consulta">
-                    <i class="fa-solid fa-calendar-check"></i> Agendar consulta
                 </a>
             </div>
         </div>
@@ -1586,7 +1564,6 @@
          JAVASCRIPT DE ALTO RENDIMIENTO (CRO)
     =========================================================== -->
     <script>
-        // Sombra en el menú al hacer scroll
         const header = document.querySelector("header");
         window.addEventListener("scroll", () => {
             if (header) {
@@ -1594,7 +1571,6 @@
             }
         });
 
-        // Acordeón para Preguntas Frecuentes
         document.querySelectorAll(".faq-item").forEach(item => {
             const question = item.querySelector(".faq-question");
             if (question) {
@@ -1604,7 +1580,6 @@
             }
         });
 
-        // Desplazamiento Suave (Smooth Scroll)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener("click", function(e) {
                 const targetId = this.getAttribute("href");
