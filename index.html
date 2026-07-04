@@ -14,6 +14,7 @@
     <meta name="theme-color" content="#06101E">
     <link rel="canonical" href="https://educacion30571729.github.io/PAGINA-ANAYA-ASOCIADOS-1/">
 
+    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Anaya y Asociados | Defensa Penal Estratégica">
     <meta property="og:description" content="Cuando más lo necesitas, la estrategia correcta puede cambiarlo todo. Más de 18 años de experiencia y respaldo institucional.">
@@ -21,12 +22,17 @@
     <meta property="og:locale" content="es_MX">
     <meta property="og:url" content="https://educacion30571729.github.io/PAGINA-ANAYA-ASOCIADOS-1/">
 
+    <!-- Google Fonts: Dupla Legal de Alta Gama -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <!-- ===========================================================
+         HOJA DE ESTILOS MAESTRA: CRO 2.0 & EXECUTIVE DARK
+    =========================================================== -->
     <style>
         :root {
             --navy: #06101E;
@@ -877,7 +883,7 @@
         }
 
         /* ===========================================================
-             SISTEMA CRO RESPONSIVE: TARJETA COMPACTA EN MÓVIL
+             SISTEMA CRO RESPONSIVE: OPCIÓN B (MÓVIL COMPACTO)
         =========================================================== */
         @media(max-width: 1100px) {
             .hero-grid, .video-grid, .contact-grid {
@@ -903,79 +909,125 @@
 
         @media(max-width: 768px) {
             section {
-                padding: 75px 0;
+                padding: 65px 0;
+            }
+            .navbar {
+                height: 75px;
             }
             .hero {
-                padding-top: 105px !important;
-                padding-bottom: 50px !important;
+                padding-top: 95px !important;
+                padding-bottom: 40px !important;
                 min-height: auto !important;
             }
-            /* MAGIA CRO: Inversión de orden. La foto sube al #1 en el móvil */
             .hero-grid {
                 display: flex !important;
                 flex-direction: column !important;
-                gap: 20px !important;
+                gap: 15px !important;
             }
+            /* MAGIA CRO OPCIÓN B: Tarjeta Súper Compacta Horizontal al Top */
             .hero-photo {
-                order: -1 !important; /* Coloca tu foto y cargo justo arriba en celular */
+                order: -1 !important;
                 width: 100% !important;
-                margin-bottom: 10px !important;
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                background: var(--card-bg) !important;
+                padding: 12px 16px !important;
+                border-radius: 16px !important;
+                border: 1px solid var(--border-gold) !important;
+                box-shadow: var(--shadow-md) !important;
+                gap: 15px !important;
+                margin-bottom: 5px !important;
             }
+            /* Foto en formato avatar circular ejecutivo de 70x70px */
             .hero-photo img {
-                width: 100% !important;
-                height: 250px !important; /* Altura ejecutiva compacta */
+                width: 70px !important;
+                height: 70px !important;
+                min-width: 70px !important;
+                border-radius: 50% !important;
                 object-fit: cover !important;
-                object-position: top center !important; /* Enfoque en tu rostro y traje */
-                border-radius: 20px !important;
-                box-shadow: var(--shadow-xl) !important;
+                object-position: top center !important;
+                border: 2px solid var(--gold) !important;
+                box-shadow: none !important;
+                margin: 0 !important;
             }
+            /* Texto del abogado ultra compacto para no devorar pantalla */
             .hero-card {
-                margin-top: -25px !important;
-                padding: 16px 20px !important;
-                width: 94% !important;
-                border-radius: 14px !important;
-                z-index: 10 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+                width: 100% !important;
             }
             .hero-card h4 {
-                font-size: 16px !important;
-                margin-bottom: 4px !important;
+                font-size: 15px !important;
+                margin-bottom: 3px !important;
+                line-height: 1.2 !important;
             }
             .hero-card p {
-                font-size: 12.5px !important;
-                line-height: 1.4 !important;
+                font-size: 11.5px !important;
+                line-height: 1.35 !important;
+                text-align: left !important;
+                color: var(--text-gray) !important;
             }
+            /* Ocultamos etiqueta en móvil porque ya lo dice la tarjeta */
+            .hero-tag {
+                display: none !important;
+            }
+            /* Título gancho compacto en 2-3 renglones */
             .hero h1 {
-                font-size: 28px !important;
+                font-size: 24px !important;
                 line-height: 1.25 !important;
                 margin-bottom: 15px !important;
+                text-align: left !important;
             }
-            .hero p {
-                font-size: 15px !important;
-                line-height: 1.6 !important;
-                margin-bottom: 25px !important;
-            }
-            /* Botones de contacto 100% visibles al instante en pantalla móvil */
+            /* Botones en cuadrícula: WhatsApp y Llamar uno al lado del otro */
             .btn-group {
-                display: flex !important;
-                flex-direction: column !important;
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 10px !important;
                 width: 100% !important;
-                gap: 12px !important;
-                margin-bottom: 25px !important;
+                margin-bottom: 20px !important;
             }
             .btn {
                 width: 100% !important;
-                padding: 16px !important;
-                font-size: 16px !important;
+                padding: 14px 8px !important;
+                font-size: 13.5px !important;
+                border-radius: 12px !important;
+                gap: 8px !important;
             }
-            .practice-grid, .trust-grid, .process-grid, .hero-trust {
+            .btn-outline {
+                grid-column: span 2 !important;
+                padding: 12px !important;
+                font-size: 14px !important;
+            }
+            /* Párrafo descriptivo */
+            .hero p {
+                font-size: 14.5px !important;
+                line-height: 1.6 !important;
+                margin-bottom: 20px !important;
+                text-align: left !important;
+            }
+            .hero-trust {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 12px !important;
+                margin-top: 15px !important;
+                padding-top: 20px !important;
+            }
+            .hero-trust div {
+                font-size: 11.5px !important;
+            }
+            /* Resto de secciones móvil */
+            .practice-grid, .trust-grid, .process-grid {
                 grid-template-columns: 1fr;
             }
             p {
-                text-align: left !important; /* Elimina huecos blancos incómodos en móvil */
-                font-size: 16px;
+                text-align: left !important;
+                font-size: 15.5px;
             }
             .empathy-box {
-                padding: 35px 22px;
+                padding: 30px 18px;
             }
         }
     </style>
@@ -983,6 +1035,9 @@
 
 <body>
 
+    <!-- ===========================================================
+         HEADER & NAVEGACIÓN
+    =========================================================== -->
     <header>
         <div class="container navbar">
             <a href="#inicio" class="logo">Anaya <span>y Asociados</span></a>
@@ -1003,12 +1058,17 @@
         </div>
     </header>
 
+    <!-- Botón Flotante con Efecto Latido -->
     <a href="https://wa.me/525532382924?text=Hola,%20necesito%20asesoría%20penal%20urgente" target="_blank" class="whatsapp-floating" aria-label="Contacto por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- ===========================================================
+         1. HERO SECTION (ENCABEZADO DE ALTA CONVERSIÓN)
+    =========================================================== -->
     <section class="hero" id="inicio">
         <div class="container hero-grid">
+            <!-- Columna Izquierda en PC / Abajo en Móvil -->
             <div>
                 <div class="hero-tag">
                     <i class="fa-solid fa-shield-halved"></i> DEFENSA PENAL ESTRATÉGICA
@@ -1017,12 +1077,13 @@
                     Cuando más lo necesitas, <strong class="gold">la estrategia correcta</strong> puede cambiarlo todo.
                 </h1>
                 
+                <!-- Tríada de Botones en Cuadrícula para Celular -->
                 <div class="btn-group">
                     <a class="btn btn-gold" href="https://wa.me/525532382924?text=Quiero%20hablar%20con%20un%20abogado" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Quiero hablar con un abogado
+                        <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                     <a class="btn btn-navy" href="tel:5532382924">
-                        <i class="fa-solid fa-phone"></i> Llamar Ahora
+                        <i class="fa-solid fa-phone"></i> Llamar
                     </a>
                     <a class="btn btn-outline" href="#contacto">
                         <i class="fa-solid fa-calendar-check"></i> Agendar una consulta
@@ -1041,20 +1102,24 @@
                 </div>
             </div>
 
+            <!-- Columna Derecha en PC / Tarjeta Súper Compacta al Top en Móvil -->
             <div class="hero-photo">
                 <img src="assets/img/aurelio-anaya.webp" alt="Lic. Aurelio de la Cruz Anaya">
                 <div class="hero-card">
                     <h4>Lic. Aurelio de la Cruz Anaya</h4>
                     <p>
-                        Socio Director de <strong>Anaya y Asociados</strong>.<br>
-                        Ex Fiscal Especializado y Ex Agente del Ministerio Público.<br>
-                        Socio Fundador de Lozano Guzmán Abogados y LAM Abogados.
+                        Socio Director | <strong>Anaya y Asociados</strong>.<br>
+                        Ex Fiscal Especializado y Ex Agente del MP.<br>
+                        Co-Fundador Lozano Guzmán y LAM Abogados.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===========================================================
+         2. IDENTIFICACIÓN DEL PROBLEMA (EMPATÍA)
+    =========================================================== -->
     <section class="empathy-section">
         <div class="container">
             <div class="empathy-box">
@@ -1066,6 +1131,9 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         3. VIDEO DE PRESENTACIÓN & 4. MENSAJE EMPÁTICO
+    =========================================================== -->
     <section class="video-empathy">
         <div class="container video-grid">
             <div class="video-player">
@@ -1102,6 +1170,9 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         5. SITUACIONES EN LAS QUE PODEMOS AYUDARTE
+    =========================================================== -->
     <section class="practice" id="situaciones">
         <div class="container">
             <div class="practice-header">
@@ -1154,6 +1225,9 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         6. ¿POR QUÉ CONFIAR EN ANAYA Y ASOCIADOS? (RESPALDO 3 FIRMAS)
+    =========================================================== -->
     <section class="trust-section" id="respaldo">
         <div class="container">
             <div class="practice-header">
@@ -1190,6 +1264,7 @@
                 </div>
             </div>
 
+            <!-- Ecosistema de 3 Firmas -->
             <div class="ecosystem-container">
                 <div class="practice-header" style="margin-bottom: 50px;">
                     <small class="gold">ALIANZA ESTRATÉGICA</small>
@@ -1247,6 +1322,9 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         7. ASÍ TRABAJAMOS (PROCESO EN 4 PASOS)
+    =========================================================== -->
     <section class="process-section" id="proceso">
         <div class="container">
             <div class="practice-header">
@@ -1279,6 +1357,9 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         8. LO QUE DICEN NUESTROS CLIENTES (TESTIMONIOS)
+    =========================================================== -->
     <section class="testimonials" id="opiniones">
         <div class="container">
             <div class="practice-header">
@@ -1315,6 +1396,9 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         9. PREGUNTAS FRECUENTES (FAQ)
+    =========================================================== -->
     <section class="faq" id="faq">
         <div class="container">
             <div class="practice-header">
@@ -1381,6 +1465,9 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         10. LLAMADO FINAL A LA ACCIÓN & CONTACTO DIRECTO
+    =========================================================== -->
     <section class="cta-final" id="contacto">
         <div class="container">
             <h2>No enfrentes este momento solo.</h2>
@@ -1437,6 +1524,9 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         FOOTER EJECUTIVO
+    =========================================================== -->
     <footer>
         <div class="container">
             <p style="margin-bottom: 15px; text-align: center; font-size: 16px;">
@@ -1450,6 +1540,9 @@
         </div>
     </footer>
 
+    <!-- ===========================================================
+         JAVASCRIPT DE ALTO RENDIMIENTO (CRO)
+    =========================================================== -->
     <script>
         // Sombra en el menú al hacer scroll
         const header = document.querySelector("header");
