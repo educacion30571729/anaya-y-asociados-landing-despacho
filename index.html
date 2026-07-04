@@ -14,7 +14,6 @@
     <meta name="theme-color" content="#06101E">
     <link rel="canonical" href="https://educacion30571729.github.io/PAGINA-ANAYA-ASOCIADOS-1/">
 
-    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Anaya y Asociados | Defensa Penal Estratégica">
     <meta property="og:description" content="Cuando más lo necesitas, la estrategia correcta puede cambiarlo todo. Más de 18 años de experiencia y respaldo institucional.">
@@ -22,17 +21,12 @@
     <meta property="og:locale" content="es_MX">
     <meta property="og:url" content="https://educacion30571729.github.io/PAGINA-ANAYA-ASOCIADOS-1/">
 
-    <!-- Google Fonts: Dupla Legal de Alta Gama -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- ===========================================================
-         HOJA DE ESTILOS MAESTRA: CRO 4.2
-    =========================================================== -->
     <style>
         :root {
             --navy: #06101E;
@@ -833,7 +827,7 @@
         }
 
         /* ===========================================================
-             SISTEMA CRO RESPONSIVE: MÓVIL 4.2 (COMPRESIÓN MAX)
+             SISTEMA CRO RESPONSIVE: MÓVIL 4.3 (Tamaños + Solapamiento Corregido)
         =========================================================== */
         @media(max-width: 1100px) {
             .hero-grid, .video-grid, .contact-grid {
@@ -859,12 +853,11 @@
 
         @media(max-width: 768px) {
             section {
-                padding: 40px 0; /* Menos espacio entre secciones */
+                padding: 40px 0;
             }
             
-            /* 1. ENCABEZADO ULTRA COMPACTO */
             .navbar {
-                height: 60px !important; /* Ahorramos 15px valiosos */
+                height: 60px !important;
                 justify-content: center !important;
             }
             .logo {
@@ -875,19 +868,18 @@
                 display: none !important;
             }
             
-            /* SUBIMOS TODO HACIA EL TECHO */
             .hero {
-                padding-top: 70px !important; /* Antes estaba en 95px, sube 25px */
+                padding-top: 70px !important;
                 padding-bottom: 20px !important;
                 min-height: auto !important;
             }
             .hero-grid {
                 display: flex !important;
                 flex-direction: column !important;
-                gap: 8px !important; /* Compresión extrema de huecos vacíos */
+                gap: 5px !important;
             }
             
-            /* 2. FOTO GIGANTE Y SUPERPUESTA */
+            /* CONTENEDOR DE FOTO + TARJETA (Corrige el error del choque) */
             .hero-photo {
                 order: -1 !important;
                 width: 100% !important;
@@ -899,23 +891,23 @@
                 border: none !important;
                 box-shadow: none !important;
                 margin-top: 0 !important;
-                margin-bottom: -35px !important; /* TRUCO MAGICO: La foto baja y muerde la tarjeta (ahorra 35px) */
+                /* El margen positivo separa correctamente la tarjeta del título que sigue */
+                margin-bottom: 15px !important; 
                 position: relative !important;
             }
             
-            /* 3. FONDO REFLECTOR EJECUTIVO (EL AURA DORADA) */
+            /* AURA DORADA (Ajustada al nuevo tamaño gigante) */
             .hero-photo::before {
                 content: '';
                 position: absolute;
                 top: 45%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 220px;
-                height: 220px;
-                background: radial-gradient(circle, rgba(201,162,77,0.35) 0%, transparent 65%);
-                z-index: 0; /* Al fondo */
+                width: 250px; /* Creció para abrazar la foto gigante */
+                height: 250px;
+                background: radial-gradient(circle, rgba(201,162,77,0.32) 0%, transparent 65%);
+                z-index: 0;
             }
-            /* Línea de horizonte dorada */
             .hero-photo::after {
                 content: '';
                 position: absolute;
@@ -927,29 +919,33 @@
                 z-index: 0;
             }
 
+            /* 1. FOTO EXTRA GRANDE (Domina el pantallaso) */
             .hero-photo img {
-                width: 165px !important; /* Foto enorme e imponente */
-                height: 165px !important;
+                width: 190px !important; /* Salto masivo de tamaño */
+                height: 190px !important;
                 border-radius: 50% !important;
                 object-fit: cover !important;
                 object-position: top center !important;
-                border: 4px solid var(--gold) !important;
+                border: 4.5px solid var(--gold) !important;
                 box-shadow: 0 10px 25px rgba(0,0,0,0.8) !important;
                 position: relative;
-                z-index: 2; /* Por encima de la tarjeta para crear el efecto superpuesto */
+                z-index: 2; 
+                /* TRUCO: Solo la imagen muerde la tarjeta hacia abajo, no toda la caja */
+                margin-bottom: -45px !important; 
             }
             
-            /* TARJETA DE TEXTO CENTRADO (Muerde la foto por debajo) */
+            /* TARJETA DEL PERFIL */
             .hero-card {
                 background: linear-gradient(135deg, #0C1E36, #06101E) !important;
-                padding: 45px 15px 15px 15px !important; /* Padding superior grande para acomodar la foto que cae encima */
+                /* Espacio superior extra para acomodar la mordida de la foto gigante */
+                padding: 60px 15px 20px 15px !important; 
                 border-radius: 18px !important;
                 border: 1px solid var(--border-gold) !important;
                 box-shadow: var(--shadow-sm) !important;
                 width: 100% !important;
                 margin: 0 !important;
                 position: relative;
-                z-index: 1; /* Debajo de la foto */
+                z-index: 1; 
             }
             .hero-card h4 {
                 font-size: 18.5px !important;
@@ -958,18 +954,17 @@
                 line-height: 1.25 !important;
                 text-align: center !important;
             }
-            /* 4. DESCRIPCIÓN 100% CENTRADA */
             .hero-card p {
                 font-size: 13.5px !important;
                 line-height: 1.45 !important;
-                text-align: center !important; /* Centrado como pediste */
+                text-align: center !important; 
                 color: var(--text-gray) !important;
             }
             .hero-tag {
                 display: none !important;
             }
             
-            /* TÍTULO GANCHO (Ligeramente compacto) */
+            /* TÍTULO GANCHO (Ya no choca con nada) */
             .hero h1 {
                 font-size: 23px !important; 
                 line-height: 1.2 !important;
@@ -978,13 +973,12 @@
                 text-align: left !important;
             }
             
-            /* BOTONES MÓVIL COMPACTOS */
             .btn-group {
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
                 gap: 10px !important;
                 width: 100% !important;
-                margin-bottom: 12px !important; /* Pegamos el gancho de abajo */
+                margin-bottom: 12px !important;
             }
             .btn {
                 width: 100% !important;
@@ -997,13 +991,13 @@
                 display: none !important;
             }
             
-            /* 5. GANCHO DE EMPATÍA (Visible en primera pantalla) */
+            /* 2 & 3. GANCHO DE EMPATÍA (LETRAS GRANDES Y CENTRADAS) */
             .mobile-empathy-card {
                 display: block !important;
                 background: var(--card-bg) !important;
                 border: 1px solid var(--border-gold) !important;
                 border-left: 4px solid var(--gold) !important;
-                padding: 16px 18px !important;
+                padding: 20px 22px !important;
                 border-radius: 16px !important;
                 margin-top: 0 !important;
                 margin-bottom: 15px !important;
@@ -1011,17 +1005,17 @@
             }
             .mobile-empathy-card h3 {
                 font-family: "Playfair Display", serif !important;
-                font-size: 17.5px !important;
+                font-size: 22px !important; /* Letras mucho más grandes */
                 color: var(--gold) !important;
-                line-height: 1.25 !important;
-                margin-bottom: 8px !important;
-                text-align: left !important;
+                line-height: 1.3 !important;
+                margin-bottom: 10px !important;
+                text-align: center !important; /* 100% Centrado */
             }
             .mobile-empathy-card p {
-                font-size: 13px !important;
-                line-height: 1.5 !important;
+                font-size: 15px !important; /* Descripción también creció */
+                line-height: 1.55 !important;
                 color: var(--white) !important;
-                text-align: left !important;
+                text-align: center !important; /* 100% Centrado */
                 margin-bottom: 0 !important;
             }
             
@@ -1050,9 +1044,6 @@
 
 <body>
 
-    <!-- ===========================================================
-         HEADER & NAVEGACIÓN
-    =========================================================== -->
     <header>
         <div class="container navbar">
             <a href="#inicio" class="logo">Anaya <span>y Asociados</span></a>
@@ -1073,17 +1064,12 @@
         </div>
     </header>
 
-    <!-- Botón Flotante con Efecto Latido -->
     <a href="https://wa.me/525532382924?text=Hola,%20necesito%20asesoría%20penal%20urgente" target="_blank" class="whatsapp-floating" aria-label="Contacto por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- ===========================================================
-         1. HERO SECTION (ENCABEZADO DE ALTA CONVERSIÓN)
-    =========================================================== -->
     <section class="hero" id="inicio">
         <div class="container hero-grid">
-            <!-- Columna Textos y Botones -->
             <div>
                 <div class="hero-tag">
                     <i class="fa-solid fa-shield-halved"></i> DEFENSA PENAL ESTRATÉGICA
@@ -1092,7 +1078,6 @@
                     Cuando más lo necesitas, <strong class="gold">la estrategia correcta</strong> puede cambiarlo todo.
                 </h1>
                 
-                <!-- DÚO DE BOTONES: WhatsApp y Llamar -->
                 <div class="btn-group">
                     <a class="btn btn-gold" href="https://wa.me/525532382924?text=Quiero%20hablar%20con%20un%20abogado" target="_blank">
                         <i class="fab fa-whatsapp"></i> WhatsApp
@@ -1102,12 +1087,10 @@
                     </a>
                 </div>
 
-                <!-- PÁRRAFO ESCRITORIO -->
                 <p class="desktop-desc">
                     Te ayudamos a entender tu situación y a defender tus derechos con claridad, experiencia y compromiso. Más de 18 años de trayectoria y respaldo institucional como Ex Fiscal Especializado en el Estado de México y toda la República Mexicana.
                 </p>
 
-                <!-- TARJETA DE EMPATÍA MÓVIL (Tirada hacia arriba) -->
                 <div class="mobile-empathy-card">
                     <h3>¿Detuvieron a un familiar?<br>¿Estás pasando por una situación complicada?</h3>
                     <p>
@@ -1123,7 +1106,6 @@
                 </div>
             </div>
 
-            <!-- Columna Derecha en PC / DISEÑO MÓVIL DE AUTOR -->
             <div class="hero-photo">
                 <img src="assets/img/aurelio-anaya.webp" alt="Lic. Aurelio De La Cruz Anaya">
                 <div class="hero-card">
@@ -1136,9 +1118,6 @@
         </div>
     </section>
 
-    <!-- ===========================================================
-         2. IDENTIFICACIÓN DEL PROBLEMA (Visible en PC / Oculta en Móvil)
-    =========================================================== -->
     <section class="empathy-section">
         <div class="container">
             <div class="empathy-box">
@@ -1150,9 +1129,6 @@
         </div>
     </section>
 
-    <!-- ===========================================================
-         3. VIDEO DE PRESENTACIÓN & 4. MENSAJE EMPÁTICO
-    =========================================================== -->
     <section class="video-empathy">
         <div class="container video-grid">
             <div class="video-player">
@@ -1189,9 +1165,6 @@
         </div>
     </section>
 
-    <!-- ===========================================================
-         5. SITUACIONES EN LAS QUE PODEMOS AYUDARTE
-    =========================================================== -->
     <section class="practice" id="situaciones">
         <div class="container">
             <div class="practice-header">
@@ -1244,9 +1217,6 @@
         </div>
     </section>
 
-    <!-- ===========================================================
-         6. ¿POR QUÉ CONFIAR EN ANAYA Y ASOCIADOS? (RESPALDO 3 FIRMAS)
-    =========================================================== -->
     <section class="trust-section" id="respaldo">
         <div class="container">
             <div class="practice-header">
@@ -1283,7 +1253,6 @@
                 </div>
             </div>
 
-            <!-- Ecosistema de 3 Firmas -->
             <div class="ecosystem-container">
                 <div class="practice-header" style="margin-bottom: 50px;">
                     <small class="gold">ALIANZA ESTRATÉGICA</small>
@@ -1341,9 +1310,6 @@
         </div>
     </section>
 
-    <!-- ===========================================================
-         7. ASÍ TRABAJAMOS (PROCESO EN 4 PASOS)
-    =========================================================== -->
     <section class="process-section" id="proceso">
         <div class="container">
             <div class="practice-header">
@@ -1376,9 +1342,6 @@
         </div>
     </section>
 
-    <!-- ===========================================================
-         8. LO QUE DICEN NUESTROS CLIENTES (TESTIMONIOS)
-    =========================================================== -->
     <section class="testimonials" id="opiniones">
         <div class="container">
             <div class="practice-header">
@@ -1415,9 +1378,6 @@
         </div>
     </section>
 
-    <!-- ===========================================================
-         9. PREGUNTAS FRECUENTES (FAQ)
-    =========================================================== -->
     <section class="faq" id="faq">
         <div class="container">
             <div class="practice-header">
@@ -1484,9 +1444,6 @@
         </div>
     </section>
 
-    <!-- ===========================================================
-         10. LLAMADO FINAL & CONTACTO
-    =========================================================== -->
     <section class="cta-final" id="contacto">
         <div class="container">
             <h2>No enfrentes este momento solo.</h2>
@@ -1540,9 +1497,6 @@
         </div>
     </section>
 
-    <!-- ===========================================================
-         FOOTER EJECUTIVO
-    =========================================================== -->
     <footer>
         <div class="container">
             <p style="margin-bottom: 15px; text-align: center; font-size: 16px;">
@@ -1556,9 +1510,6 @@
         </div>
     </footer>
 
-    <!-- ===========================================================
-         JAVASCRIPT DE ALTO RENDIMIENTO (CRO)
-    =========================================================== -->
     <script>
         const header = document.querySelector("header");
         window.addEventListener("scroll", () => {
@@ -1589,10 +1540,4 @@
         });
     </script>
 </body>
-</html>  
-
-
-
-
-
-
+</html>
