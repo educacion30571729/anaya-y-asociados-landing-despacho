@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- ===========================================================
-         HOJA DE ESTILOS MAESTRA: CRO 2.0 & EXECUTIVE DARK
+         HOJA DE ESTILOS MAESTRA: CRO 3.0 & EXECUTIVE BORCELLE STYLE
     =========================================================== -->
     <style>
         :root {
@@ -98,7 +98,6 @@
             line-height: 1.85;
         }
 
-        /* Excepciones de centrado para simetría en encabezados de sección */
         .section-subtitle, .empathy-box p, .step-card p, .cta-final p, 
         .faq-header p, .map-header p, .testimonial-header p, .practice-header p, 
         .ecosystem-header p, .hero-trust p, .trust-item p {
@@ -141,7 +140,6 @@
             text-align: center;
         }
 
-        /* Botón 1: WhatsApp (Oro) */
         .btn-gold {
             background: var(--gold);
             color: var(--navy);
@@ -154,7 +152,6 @@
             box-shadow: 0 15px 35px rgba(201, 162, 77, 0.5);
         }
 
-        /* Botón 2: Llamada (Azul Metálico Oscuro) */
         .btn-navy {
             background: #0D2444;
             color: var(--white);
@@ -166,7 +163,6 @@
             transform: translateY(-3px);
         }
 
-        /* Botón 3: Agendar Consulta (Borde Oro) */
         .btn-outline {
             background: transparent;
             border: 2px solid var(--gold);
@@ -242,7 +238,7 @@
             align-items: center;
         }
 
-        /* Botón Flotante con Efecto Latido de Urgencia */
+        /* Botón Flotante con Efecto Latido */
         .whatsapp-floating {
             position: fixed;
             right: 28px;
@@ -273,7 +269,7 @@
         }
 
         /* ===========================================================
-             1. HERO SECTION (ENCABEZADO DE ALTA CONVERSIÓN)
+             1. HERO SECTION & EMPATÍA INTEGRADA
         =========================================================== */
         .hero {
             min-height: 100vh;
@@ -313,7 +309,7 @@
             line-height: 1.18;
         }
 
-        .hero p {
+        .hero p.desktop-desc {
             font-size: 18px;
             margin-bottom: 35px;
             max-width: 620px;
@@ -343,7 +339,7 @@
             font-size: 20px;
         }
 
-        /* Foto Hero sin encimados en Escritorio */
+        /* Foto Hero Escritorio */
         .hero-photo {
             display: flex;
             flex-direction: column;
@@ -383,9 +379,7 @@
             text-align: left;
         }
 
-        /* ===========================================================
-             2. IDENTIFICACIÓN DEL PROBLEMA (EMPATÍA)
-        =========================================================== */
+        /* Tarjeta de Empatía (Visible por defecto en sección separada para PC) */
         .empathy-section {
             background: var(--navy-light);
             padding: 90px 0;
@@ -414,6 +408,11 @@
             margin: 0 auto;
             line-height: 1.8;
             color: var(--white);
+        }
+
+        /* En escritorio, la tarjeta móvil de empatía está oculta */
+        .mobile-empathy-card {
+            display: none;
         }
 
         /* ===========================================================
@@ -547,7 +546,7 @@
         }
 
         /* ===========================================================
-             6. ¿POR QUÉ CONFIAR EN NOSOTROS? (AUTORIDAD + ECOSISTEMA)
+             6. ¿POR QUÉ CONFIAR EN NOSOTROS?
         =========================================================== */
         .trust-section {
             background: var(--navy);
@@ -802,7 +801,7 @@
         }
 
         /* ===========================================================
-             10. LLAMADO FINAL A LA ACCIÓN & CONTACTO
+             10. LLAMADO FINAL & CONTACTO
         =========================================================== */
         .cta-final {
             padding: 100px 0;
@@ -823,7 +822,6 @@
             text-align: center;
         }
 
-        /* Contacto Directo y Mapa */
         .contact-section {
             background: var(--navy);
             padding: 80px 0 0;
@@ -873,7 +871,6 @@
             filter: grayscale(80%) invert(90%) contrast(85%);
         }
 
-        /* Footer */
         footer {
             background: #030810;
             padding: 60px 0 40px;
@@ -883,7 +880,7 @@
         }
 
         /* ===========================================================
-             SISTEMA CRO RESPONSIVE: OPCIÓN B (MÓVIL COMPACTO)
+             SISTEMA CRO RESPONSIVE: ESTILO BORCELLE & EMPATÍA TOP
         =========================================================== */
         @media(max-width: 1100px) {
             .hero-grid, .video-grid, .contact-grid {
@@ -909,14 +906,14 @@
 
         @media(max-width: 768px) {
             section {
-                padding: 65px 0;
+                padding: 60px 0;
             }
             .navbar {
                 height: 75px;
             }
             .hero {
                 padding-top: 95px !important;
-                padding-bottom: 40px !important;
+                padding-bottom: 30px !important;
                 min-height: auto !important;
             }
             .hero-grid {
@@ -924,34 +921,33 @@
                 flex-direction: column !important;
                 gap: 15px !important;
             }
-            /* MAGIA CRO OPCIÓN B: Tarjeta Súper Compacta Horizontal al Top */
+            /* 1. DISEÑO BORCELLE: Encabezado Ejecutivo Proporcional */
             .hero-photo {
                 order: -1 !important;
                 width: 100% !important;
                 display: flex !important;
                 flex-direction: row !important;
                 align-items: center !important;
-                background: var(--card-bg) !important;
-                padding: 12px 16px !important;
-                border-radius: 16px !important;
-                border: 1px solid var(--border-gold) !important;
-                box-shadow: var(--shadow-md) !important;
-                gap: 15px !important;
+                background: linear-gradient(135deg, #0C1E36, #06101E) !important;
+                padding: 16px 18px !important;
+                border-radius: 20px !important;
+                border: 1px solid var(--gold) !important;
+                box-shadow: 0 15px 35px rgba(0,0,0,0.5) !important;
+                gap: 16px !important;
                 margin-bottom: 5px !important;
             }
-            /* Foto en formato avatar circular ejecutivo de 70x70px */
+            /* Foto en tamaño proporcional 85x85px con anillo dorado brillante */
             .hero-photo img {
-                width: 70px !important;
-                height: 70px !important;
-                min-width: 70px !important;
+                width: 85px !important;
+                height: 85px !important;
+                min-width: 85px !important;
                 border-radius: 50% !important;
                 object-fit: cover !important;
                 object-position: top center !important;
-                border: 2px solid var(--gold) !important;
-                box-shadow: none !important;
+                border: 2.5px solid var(--gold) !important;
+                box-shadow: 0 0 15px rgba(201,162,77,0.4) !important;
                 margin: 0 !important;
             }
-            /* Texto del abogado ultra compacto para no devorar pantalla */
             .hero-card {
                 margin: 0 !important;
                 padding: 0 !important;
@@ -961,28 +957,28 @@
                 width: 100% !important;
             }
             .hero-card h4 {
-                font-size: 15px !important;
-                margin-bottom: 3px !important;
+                font-size: 16.5px !important;
+                margin-bottom: 4px !important;
+                color: var(--white) !important;
                 line-height: 1.2 !important;
             }
             .hero-card p {
-                font-size: 11.5px !important;
-                line-height: 1.35 !important;
+                font-size: 12px !important;
+                line-height: 1.4 !important;
                 text-align: left !important;
                 color: var(--text-gray) !important;
             }
-            /* Ocultamos etiqueta en móvil porque ya lo dice la tarjeta */
             .hero-tag {
                 display: none !important;
             }
-            /* Título gancho compacto en 2-3 renglones */
+            /* 2. Título Gancho en 2-3 renglones perfectos */
             .hero h1 {
-                font-size: 24px !important;
+                font-size: 25px !important;
                 line-height: 1.25 !important;
-                margin-bottom: 15px !important;
+                margin-bottom: 16px !important;
                 text-align: left !important;
             }
-            /* Botones en cuadrícula: WhatsApp y Llamar uno al lado del otro */
+            /* 3. Botones de Acción en Cuadrícula Ergonomica */
             .btn-group {
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
@@ -1002,32 +998,56 @@
                 padding: 12px !important;
                 font-size: 14px !important;
             }
-            /* Párrafo descriptivo */
-            .hero p {
-                font-size: 14.5px !important;
-                line-height: 1.6 !important;
+            /* 4. Ocultamos el texto blanco aburrido en celular */
+            .hero p.desktop-desc {
+                display: none !important;
+            }
+            /* 5. EL ACERTO MAESTRO: Gancho de Empatía en Tarjeta de Alta Conversión */
+            .mobile-empathy-card {
+                display: block !important;
+                background: var(--card-bg) !important;
+                border: 1px solid var(--border-gold) !important;
+                border-left: 4px solid var(--gold) !important;
+                padding: 22px 20px !important;
+                border-radius: 16px !important;
+                margin-top: 5px !important;
                 margin-bottom: 20px !important;
+                box-shadow: var(--shadow-sm) !important;
+            }
+            .mobile-empathy-card h3 {
+                font-family: "Playfair Display", serif !important;
+                font-size: 20px !important;
+                color: var(--gold) !important;
+                line-height: 1.3 !important;
+                margin-bottom: 12px !important;
                 text-align: left !important;
+            }
+            .mobile-empathy-card p {
+                font-size: 14.5px !important;
+                line-height: 1.65 !important;
+                color: var(--white) !important;
+                text-align: left !important;
+                margin-bottom: 0 !important;
+            }
+            /* En móvil ocultamos la sección 2 vieja porque ya está integrada en el Top */
+            .empathy-section {
+                display: none !important;
             }
             .hero-trust {
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 12px !important;
-                margin-top: 15px !important;
+                margin-top: 10px !important;
                 padding-top: 20px !important;
             }
             .hero-trust div {
                 font-size: 11.5px !important;
             }
-            /* Resto de secciones móvil */
             .practice-grid, .trust-grid, .process-grid {
                 grid-template-columns: 1fr;
             }
             p {
                 text-align: left !important;
                 font-size: 15.5px;
-            }
-            .empathy-box {
-                padding: 30px 18px;
             }
         }
     </style>
@@ -1068,7 +1088,7 @@
     =========================================================== -->
     <section class="hero" id="inicio">
         <div class="container hero-grid">
-            <!-- Columna Izquierda en PC / Abajo en Móvil -->
+            <!-- Columna Textos y Botones -->
             <div>
                 <div class="hero-tag">
                     <i class="fa-solid fa-shield-halved"></i> DEFENSA PENAL ESTRATÉGICA
@@ -1090,9 +1110,18 @@
                     </a>
                 </div>
 
-                <p>
+                <!-- PÁRRAFO ESCRITORIO (Se oculta en móvil para dar paso al Gancho de Empatía) -->
+                <p class="desktop-desc">
                     Te ayudamos a entender tu situación y a defender tus derechos con claridad, experiencia y compromiso. Más de 18 años de trayectoria y respaldo institucional como Ex Fiscal Especializado en el Estado de México y toda la República Mexicana.
                 </p>
+
+                <!-- TARJETA DE EMPATÍA MÓVIL (Tu idea de oro: aparece solo en celular tras los botones) -->
+                <div class="mobile-empathy-card">
+                    <h3>¿Detuvieron a un familiar?<br>¿Estás pasando por una situación complicada?</h3>
+                    <p>
+                        No sabes en quién confiar, ni qué hacer. El miedo y la incertidumbre son normales. Enfrentar el sistema penal puede resultar abrumador, pero no tienes que pasar por esto solo. Estamos aquí para orientarte desde el primer momento con honestidad y absoluta claridad técnica.
+                    </p>
+                </div>
 
                 <div class="hero-trust">
                     <div><i class="fa-solid fa-user-shield"></i><span>Atención Personalizada</span></div>
@@ -1102,7 +1131,7 @@
                 </div>
             </div>
 
-            <!-- Columna Derecha en PC / Tarjeta Súper Compacta al Top en Móvil -->
+            <!-- Columna Derecha en PC / Tarjeta Borcelle al Top en Móvil -->
             <div class="hero-photo">
                 <img src="assets/img/aurelio-anaya.webp" alt="Lic. Aurelio de la Cruz Anaya">
                 <div class="hero-card">
@@ -1118,7 +1147,7 @@
     </section>
 
     <!-- ===========================================================
-         2. IDENTIFICACIÓN DEL PROBLEMA (EMPATÍA)
+         2. IDENTIFICACIÓN DEL PROBLEMA (Visible en PC / Oculta en Móvil)
     =========================================================== -->
     <section class="empathy-section">
         <div class="container">
@@ -1146,7 +1175,7 @@
                 <small class="gold" style="letter-spacing: 3px; font-weight: 600; display: block; margin-bottom: 10px;">CONÓCENOS</small>
                 <h2>Estamos para ayudarte.</h2>
                 <p>
-                    En este breve mensaje te explicamos cómo podemos ayudarte y por qué cada caso es fundamental para nuestro despacho. Reducimos la ansiedad con respuestas directas y estrategias jurídicas reales.
+                    En este breve mensaje te explicamos cómo podemos ayudarte y por qué cada caso es fundamental para nuestro despacho. Reducimos la ansiedad con respuestas directas y strategies jurídicas reales.
                 </p>
                 <ul class="empathy-points">
                     <li>
