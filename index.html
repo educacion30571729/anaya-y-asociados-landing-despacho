@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- ===========================================================
-         HOJA DE ESTILOS MAESTRA: CRO 4.1 & DISEÑO DE AUTOR
+         HOJA DE ESTILOS MAESTRA: CRO 4.2
     =========================================================== -->
     <style>
         :root {
@@ -112,9 +112,6 @@
             color: var(--gold);
         }
 
-        /* ===========================================================
-             SISTEMA DE BOTONES CRO
-        =========================================================== */
         .btn-group {
             display: flex;
             gap: 16px;
@@ -161,9 +158,6 @@
             transform: translateY(-3px);
         }
 
-        /* ===========================================================
-             HEADER & NAVEGACIÓN FIJA
-        =========================================================== */
         header {
             position: fixed;
             left: 0;
@@ -255,9 +249,6 @@
             to { box-shadow: 0 0 0 25px rgba(37, 211, 102, 0); }
         }
 
-        /* ===========================================================
-             1. HERO SECTION & EMPATÍA INTEGRADA
-        =========================================================== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -330,7 +321,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative;
         }
 
         .hero-photo img {
@@ -340,8 +330,6 @@
             border: 1px solid var(--border-gold);
             box-shadow: var(--shadow-xl);
             object-fit: cover;
-            position: relative;
-            z-index: 2;
         }
 
         .hero-card {
@@ -402,9 +390,6 @@
             display: none;
         }
 
-        /* ===========================================================
-             3. VIDEO & 4. MENSAJE EMPÁTICO
-        =========================================================== */
         .video-empathy {
             background: var(--navy);
         }
@@ -455,9 +440,6 @@
             margin-top: 3px;
         }
 
-        /* ===========================================================
-             5. SITUACIONES EN LAS QUE PODEMOS AYUDARTE
-        =========================================================== */
         .practice {
             background: var(--navy-light);
         }
@@ -532,9 +514,6 @@
             text-align: center;
         }
 
-        /* ===========================================================
-             6. ¿POR QUÉ CONFIAR EN NOSOTROS?
-        =========================================================== */
         .trust-section {
             background: var(--navy);
         }
@@ -572,7 +551,6 @@
             margin-bottom: 0;
         }
 
-        /* Ecosistema 3 Firmas */
         .ecosystem-container {
             margin-top: 60px;
             border-top: 1px solid var(--border);
@@ -634,9 +612,6 @@
             margin-top: 4px;
         }
 
-        /* ===========================================================
-             7. ASÍ TRABAJAMOS (PROCESO EN 4 PASOS)
-        =========================================================== */
         .process-section {
             background: var(--navy-light);
         }
@@ -682,9 +657,6 @@
             margin-bottom: 0;
         }
 
-        /* ===========================================================
-             8. OPINIONES DE CLIENTES
-        =========================================================== */
         .testimonials {
             background: var(--navy);
         }
@@ -724,9 +696,6 @@
             color: var(--gold);
         }
 
-        /* ===========================================================
-             9. PREGUNTAS FRECUENTES (FAQ)
-        =========================================================== */
         .faq {
             background: var(--navy-light);
         }
@@ -787,9 +756,6 @@
             transform: rotate(180deg);
         }
 
-        /* ===========================================================
-             10. LLAMADO FINAL A LA ACCIÓN
-        =========================================================== */
         .cta-final {
             padding: 100px 0;
             background: linear-gradient(135deg, #040B14, #0C1E36);
@@ -867,7 +833,7 @@
         }
 
         /* ===========================================================
-             SISTEMA CRO RESPONSIVE: CIRUGÍA MÓVIL 4.1 PRO
+             SISTEMA CRO RESPONSIVE: CIRUGÍA MÓVIL 4.2 (COMPRESIÓN MAX)
         =========================================================== */
         @media(max-width: 1100px) {
             .hero-grid, .video-grid, .contact-grid {
@@ -893,35 +859,35 @@
 
         @media(max-width: 768px) {
             section {
-                padding: 60px 0;
+                padding: 40px 0; /* Menos espacio entre secciones */
             }
             
-            /* ENCABEZADO MÓVIL (COMPACTO) */
+            /* 1. ENCABEZADO ULTRA COMPACTO */
             .navbar {
-                height: 70px !important; /* Más delgado para ganar espacio vertical */
+                height: 60px !important; /* Ahorramos 15px valiosos */
                 justify-content: center !important;
             }
             .logo {
-                font-size: 24px !important;
+                font-size: 23px !important;
                 white-space: nowrap !important;
             }
             .contact-nav {
                 display: none !important;
             }
             
-            /* COMPACTACIÓN VERTICAL DEL HERO */
+            /* SUBIMOS TODO HACIA EL TECHO */
             .hero {
-                padding-top: 80px !important; /* Subimos todo hacia el techo */
+                padding-top: 70px !important; /* Antes estaba en 95px, sube 25px */
                 padding-bottom: 20px !important;
                 min-height: auto !important;
             }
             .hero-grid {
                 display: flex !important;
                 flex-direction: column !important;
-                gap: 12px !important; /* Menos huecos vacíos */
+                gap: 8px !important; /* Compresión extrema de huecos vacíos */
             }
             
-            /* 1 & 2. FOTO PROTAGONISTA CON FONDO REFLECTOR */
+            /* 2. FOTO GIGANTE Y SUPERPUESTA */
             .hero-photo {
                 order: -1 !important;
                 width: 100% !important;
@@ -929,89 +895,101 @@
                 flex-direction: column !important;
                 align-items: center !important;
                 background: transparent !important;
-                padding: 10px 0 !important;
+                padding: 0 !important;
                 border: none !important;
                 box-shadow: none !important;
-                margin-bottom: -5px !important; /* Acerca la foto a la tarjeta */
+                margin-top: 0 !important;
+                margin-bottom: -35px !important; /* TRUCO MAGICO: La foto baja y muerde la tarjeta (ahorra 35px) */
                 position: relative !important;
             }
             
-            /* MAGIA VISUAL: Resplandor dorado detrás de la foto */
+            /* 3. FONDO REFLECTOR EJECUTIVO (EL AURA DORADA) */
             .hero-photo::before {
                 content: '';
                 position: absolute;
                 top: 45%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 170px;
-                height: 170px;
-                background: radial-gradient(circle, rgba(201,162,77,0.3) 0%, transparent 65%);
-                border-radius: 50%;
-                z-index: 1;
+                width: 220px;
+                height: 220px;
+                background: radial-gradient(circle, rgba(201,162,77,0.35) 0%, transparent 65%);
+                z-index: 0; /* Al fondo */
             }
-            
+            /* Línea de horizonte dorada */
+            .hero-photo::after {
+                content: '';
+                position: absolute;
+                top: 45%;
+                left: -10%;
+                width: 120%;
+                height: 1px;
+                background: linear-gradient(90deg, transparent, rgba(201,162,77,0.6), transparent);
+                z-index: 0;
+            }
+
             .hero-photo img {
-                width: 145px !important; /* Foto notablemente más grande */
-                height: 145px !important;
+                width: 165px !important; /* Foto enorme e imponente */
+                height: 165px !important;
                 border-radius: 50% !important;
                 object-fit: cover !important;
                 object-position: top center !important;
-                border: 3.5px solid var(--gold) !important;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.6) !important;
-                margin-bottom: 5px !important;
+                border: 4px solid var(--gold) !important;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.8) !important;
                 position: relative;
-                z-index: 2; /* Encima del resplandor */
+                z-index: 2; /* Por encima de la tarjeta para crear el efecto superpuesto */
             }
             
-            /* 3. TARJETA AMPLIA CON RESPIRACIÓN LATERAL */
+            /* TARJETA DE TEXTO CENTRADO (Muerde la foto por debajo) */
             .hero-card {
                 background: linear-gradient(135deg, #0C1E36, #06101E) !important;
-                padding: 22px 28px !important; /* 28px da más margen a los lados */
+                padding: 45px 15px 15px 15px !important; /* Padding superior grande para acomodar la foto que cae encima */
                 border-radius: 18px !important;
                 border: 1px solid var(--border-gold) !important;
                 box-shadow: var(--shadow-sm) !important;
                 width: 100% !important;
                 margin: 0 !important;
                 position: relative;
-                z-index: 3;
+                z-index: 1; /* Debajo de la foto */
             }
             .hero-card h4 {
-                font-size: 19px !important;
-                margin-bottom: 10px !important;
+                font-size: 18.5px !important;
+                margin-bottom: 6px !important;
                 color: var(--white) !important;
                 line-height: 1.25 !important;
                 text-align: center !important;
             }
+            /* 4. DESCRIPCIÓN 100% CENTRADA */
             .hero-card p {
-                font-size: 14.5px !important; /* Letra más grande y legible */
-                line-height: 1.6 !important;
-                text-align: justify !important;
+                font-size: 13.5px !important;
+                line-height: 1.45 !important;
+                text-align: center !important; /* Centrado como pediste */
                 color: var(--text-gray) !important;
             }
             .hero-tag {
                 display: none !important;
             }
             
-            /* TÍTULO GANCHO */
+            /* TÍTULO GANCHO (Ligeramente compacto) */
             .hero h1 {
-                font-size: 24px !important; /* Ligeramente compacto para ahorrar espacio */
-                line-height: 1.22 !important;
+                font-size: 23px !important; 
+                line-height: 1.2 !important;
+                margin-top: 5px !important;
                 margin-bottom: 12px !important;
                 text-align: left !important;
             }
             
-            /* BOTONES MÓVIL */
+            /* BOTONES MÓVIL COMPACTOS */
             .btn-group {
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
-                gap: 12px !important;
+                gap: 10px !important;
                 width: 100% !important;
-                margin-bottom: 15px !important; /* Pegamos más el gancho de abajo */
+                margin-bottom: 12px !important; /* Pegamos el gancho de abajo */
             }
             .btn {
                 width: 100% !important;
-                padding: 15px 8px !important;
-                font-size: 14.5px !important;
+                padding: 14px 6px !important;
+                font-size: 14px !important;
                 border-radius: 12px !important;
                 gap: 6px !important;
             }
@@ -1019,29 +997,29 @@
                 display: none !important;
             }
             
-            /* GANCHO DE EMPATÍA (Visible en primera pantalla) */
+            /* 5. GANCHO DE EMPATÍA (Visible en primera pantalla) */
             .mobile-empathy-card {
                 display: block !important;
                 background: var(--card-bg) !important;
                 border: 1px solid var(--border-gold) !important;
                 border-left: 4px solid var(--gold) !important;
-                padding: 18px 22px !important;
+                padding: 16px 18px !important;
                 border-radius: 16px !important;
                 margin-top: 0 !important;
-                margin-bottom: 20px !important;
+                margin-bottom: 15px !important;
                 box-shadow: var(--shadow-sm) !important;
             }
             .mobile-empathy-card h3 {
                 font-family: "Playfair Display", serif !important;
-                font-size: 19px !important;
+                font-size: 17.5px !important;
                 color: var(--gold) !important;
                 line-height: 1.25 !important;
-                margin-bottom: 10px !important;
+                margin-bottom: 8px !important;
                 text-align: left !important;
             }
             .mobile-empathy-card p {
-                font-size: 14px !important;
-                line-height: 1.6 !important;
+                font-size: 13px !important;
+                line-height: 1.5 !important;
                 color: var(--white) !important;
                 text-align: left !important;
                 margin-bottom: 0 !important;
@@ -1057,14 +1035,14 @@
                 padding-top: 15px !important;
             }
             .hero-trust div {
-                font-size: 11.5px !important;
+                font-size: 11px !important;
             }
             .practice-grid, .trust-grid, .process-grid {
                 grid-template-columns: 1fr;
             }
             p {
                 text-align: left !important;
-                font-size: 15.5px;
+                font-size: 15px;
             }
         }
     </style>
@@ -1077,7 +1055,6 @@
     =========================================================== -->
     <header>
         <div class="container navbar">
-            <!-- Logotipo Dorado con Contorno Negro -->
             <a href="#inicio" class="logo">Anaya <span>y Asociados</span></a>
             <ul class="menu">
                 <li><a href="#inicio">Inicio</a></li>
