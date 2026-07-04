@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Lic. Aurelio de la Cruz Anaya | Defensa Penal Estratégica | Anaya y Asociados</title>
+    <title>Lic. Aurelio De La Cruz Anaya | Defensa Penal Estratégica | Anaya y Asociados</title>
     
     <meta name="description" content="Abogado Especialista en Derecho Penal con más de 18 años de experiencia. Ex Fiscal Especializado. Atención inmediata en emergencias, detenciones y amparos las 24 horas.">
     <meta name="keywords" content="abogado penalista, abogado penal ecatepec, defensa penal estratégica, detención ministerio público, amparo penal, delitos federales, juicios orales, anaya y asociados">
-    <meta name="author" content="Lic. Aurelio de la Cruz Anaya">
+    <meta name="author" content="Lic. Aurelio De La Cruz Anaya">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#06101E">
     <link rel="canonical" href="https://educacion30571729.github.io/PAGINA-ANAYA-ASOCIADOS-1/">
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- ===========================================================
-         HOJA DE ESTILOS MAESTRA: CRO 3.0 & EXECUTIVE BORCELLE STYLE
+         HOJA DE ESTILOS MAESTRA: CRO 3.1 & EXECUTIVE BORCELLE STYLE
     =========================================================== -->
     <style>
         :root {
@@ -880,7 +880,7 @@
         }
 
         /* ===========================================================
-             SISTEMA CRO RESPONSIVE: ESTILO BORCELLE & EMPATÍA TOP
+             SISTEMA CRO RESPONSIVE: CIRUGÍA 3.1 PRO (MÓVIL)
         =========================================================== */
         @media(max-width: 1100px) {
             .hero-grid, .video-grid, .contact-grid {
@@ -908,8 +908,17 @@
             section {
                 padding: 60px 0;
             }
+            /* ENCABEZADO MÓVIL: Una sola línea limpia y sin teléfono */
             .navbar {
                 height: 75px;
+                justify-content: center !important;
+            }
+            .logo {
+                font-size: 24px !important;
+                white-space: nowrap !important; /* Garantiza que Anaya y Asociados esté en una sola línea */
+            }
+            .contact-nav {
+                display: none !important; /* Oculta el teléfono del encabezado en celular */
             }
             .hero {
                 padding-top: 95px !important;
@@ -919,28 +928,29 @@
             .hero-grid {
                 display: flex !important;
                 flex-direction: column !important;
-                gap: 15px !important;
+                gap: 18px !important;
             }
-            /* 1. DISEÑO BORCELLE: Encabezado Ejecutivo Proporcional */
+            /* 1. RECTÁNGULO DE PERFIL: Más alto, foto a la derecha y texto recorrido */
             .hero-photo {
                 order: -1 !important;
                 width: 100% !important;
                 display: flex !important;
-                flex-direction: row !important;
+                flex-direction: row-reverse !important; /* Foto alineada al lado derecho */
                 align-items: center !important;
+                justify-content: space-between !important;
                 background: linear-gradient(135deg, #0C1E36, #06101E) !important;
-                padding: 16px 18px !important;
+                padding: 26px 20px !important; /* Rectángulo de mayor altura y respiración */
                 border-radius: 20px !important;
                 border: 1px solid var(--gold) !important;
                 box-shadow: 0 15px 35px rgba(0,0,0,0.5) !important;
                 gap: 16px !important;
                 margin-bottom: 5px !important;
             }
-            /* Foto en tamaño proporcional 85x85px con anillo dorado brillante */
+            /* Foto de 90x90px al lado derecho con anillo dorado */
             .hero-photo img {
-                width: 85px !important;
-                height: 85px !important;
-                min-width: 85px !important;
+                width: 90px !important;
+                height: 90px !important;
+                min-width: 90px !important;
                 border-radius: 50% !important;
                 object-fit: cover !important;
                 object-position: top center !important;
@@ -948,37 +958,42 @@
                 box-shadow: 0 0 15px rgba(201,162,77,0.4) !important;
                 margin: 0 !important;
             }
+            /* Contenedor de texto recorrido un poco más a la derecha */
             .hero-card {
                 margin: 0 !important;
-                padding: 0 !important;
+                padding: 0 0 0 10px !important; /* Recorrido a la derecha */
                 background: transparent !important;
                 border: none !important;
                 box-shadow: none !important;
                 width: 100% !important;
+                flex: 1 !important;
             }
+            /* Nombre centrado y con ortografía/mayúsculas corregidas */
             .hero-card h4 {
                 font-size: 16.5px !important;
-                margin-bottom: 4px !important;
+                margin-bottom: 6px !important;
                 color: var(--white) !important;
-                line-height: 1.2 !important;
+                line-height: 1.25 !important;
+                text-align: center !important; /* Alineación centrada para el nombre */
             }
+            /* Descripción conserva alineación izquierda */
             .hero-card p {
                 font-size: 12px !important;
-                line-height: 1.4 !important;
+                line-height: 1.45 !important;
                 text-align: left !important;
                 color: var(--text-gray) !important;
             }
             .hero-tag {
                 display: none !important;
             }
-            /* 2. Título Gancho en 2-3 renglones perfectos */
+            /* Título Gancho */
             .hero h1 {
                 font-size: 25px !important;
                 line-height: 1.25 !important;
                 margin-bottom: 16px !important;
                 text-align: left !important;
             }
-            /* 3. Botones de Acción en Cuadrícula Ergonomica */
+            /* Botones en Cuadrícula Ergonomica */
             .btn-group {
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
@@ -998,11 +1013,10 @@
                 padding: 12px !important;
                 font-size: 14px !important;
             }
-            /* 4. Ocultamos el texto blanco aburrido en celular */
             .hero p.desktop-desc {
                 display: none !important;
             }
-            /* 5. EL ACERTO MAESTRO: Gancho de Empatía en Tarjeta de Alta Conversión */
+            /* GANCHO DE EMPATÍA EN TARJETA (Puente visual al scroll) */
             .mobile-empathy-card {
                 display: block !important;
                 background: var(--card-bg) !important;
@@ -1029,7 +1043,6 @@
                 text-align: left !important;
                 margin-bottom: 0 !important;
             }
-            /* En móvil ocultamos la sección 2 vieja porque ya está integrada en el Top */
             .empathy-section {
                 display: none !important;
             }
@@ -1110,12 +1123,12 @@
                     </a>
                 </div>
 
-                <!-- PÁRRAFO ESCRITORIO (Se oculta en móvil para dar paso al Gancho de Empatía) -->
+                <!-- PÁRRAFO ESCRITORIO -->
                 <p class="desktop-desc">
                     Te ayudamos a entender tu situación y a defender tus derechos con claridad, experiencia y compromiso. Más de 18 años de trayectoria y respaldo institucional como Ex Fiscal Especializado en el Estado de México y toda la República Mexicana.
                 </p>
 
-                <!-- TARJETA DE EMPATÍA MÓVIL (Tu idea de oro: aparece solo en celular tras los botones) -->
+                <!-- TARJETA DE EMPATÍA MÓVIL (Tu idea de oro integrado en el Top) -->
                 <div class="mobile-empathy-card">
                     <h3>¿Detuvieron a un familiar?<br>¿Estás pasando por una situación complicada?</h3>
                     <p>
@@ -1131,11 +1144,11 @@
                 </div>
             </div>
 
-            <!-- Columna Derecha en PC / Tarjeta Borcelle al Top en Móvil -->
+            <!-- Columna Derecha en PC / Tarjeta Súper Compacta con Foto a la Derecha en Móvil -->
             <div class="hero-photo">
-                <img src="assets/img/aurelio-anaya.webp" alt="Lic. Aurelio de la Cruz Anaya">
+                <img src="assets/img/aurelio-anaya.webp" alt="Lic. Aurelio De La Cruz Anaya">
                 <div class="hero-card">
-                    <h4>Lic. Aurelio de la Cruz Anaya</h4>
+                    <h4>Lic. Aurelio De La Cruz Anaya</h4>
                     <p>
                         Socio Director | <strong>Anaya y Asociados</strong>.<br>
                         Ex Fiscal Especializado y Ex Agente del MP.<br>
@@ -1175,7 +1188,7 @@
                 <small class="gold" style="letter-spacing: 3px; font-weight: 600; display: block; margin-bottom: 10px;">CONÓCENOS</small>
                 <h2>Estamos para ayudarte.</h2>
                 <p>
-                    En este breve mensaje te explicamos cómo podemos ayudarte y por qué cada caso es fundamental para nuestro despacho. Reducimos la ansiedad con respuestas directas y strategies jurídicas reales.
+                    En este breve mensaje te explicamos cómo podemos ayudarte y por qué cada caso es fundamental para nuestro despacho. Reducimos la ansiedad con respuestas directas y estrategias jurídicas reales.
                 </p>
                 <ul class="empathy-points">
                     <li>
@@ -1298,7 +1311,7 @@
                 <div class="practice-header" style="margin-bottom: 50px;">
                     <small class="gold">ALIANZA ESTRATÉGICA</small>
                     <h3>Tres Firmas. Una Misma Filosofía de Trabajo.</h3>
-                    <p class="section-subtitle">La experiencia del Lic. Aurelio de la Cruz Anaya se respalda mediante el liderazgo y la fundación de tres prestigiosas firmas jurídicas en la República Mexicana.</p>
+                    <p class="section-subtitle">La experiencia del Lic. Aurelio De La Cruz Anaya se respalda mediante el liderazgo y la fundación de tres prestigiosas firmas jurídicas en la República Mexicana.</p>
                 </div>
                 <div class="ecosystem-grid">
                     <div class="ecosystem-card">
@@ -1560,10 +1573,10 @@
         <div class="container">
             <p style="margin-bottom: 15px; text-align: center; font-size: 16px;">
                 <strong class="gold" style="font-size: 20px; font-family: 'Playfair Display', serif;">ANAYA Y ASOCIADOS</strong><br>
-                Defensa Penal Estratégica | Lic. Aurelio de la Cruz Anaya
+                Defensa Penal Estratégica | Lic. Aurelio De La Cruz Anaya
             </p>
             <p style="color: rgba(255,255,255,0.4); text-align: center; font-size: 13px;">
-                © 2026 Lic. Aurelio de la Cruz Anaya. Todos los derechos reservados.<br>
+                © 2026 Lic. Aurelio De La Cruz Anaya. Todos los derechos reservados.<br>
                 Despacho en Ecatepec de Morelos, Estado de México | Cobertura en toda la República Mexicana.
             </p>
         </div>
