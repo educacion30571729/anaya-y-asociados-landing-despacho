@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- ===========================================================
-         HOJA DE ESTILOS MAESTRA: CRO 4.3 (Choque Reparado y Tamaños)
+         HOJA DE ESTILOS MAESTRA: CRO 4.2
     =========================================================== -->
     <style>
         :root {
@@ -833,7 +833,7 @@
         }
 
         /* ===========================================================
-             SISTEMA CRO RESPONSIVE: MÓVIL 4.3 (Tamaños + Solapamiento Corregido)
+             SISTEMA CRO RESPONSIVE: MÓVIL 4.2 (COMPRESIÓN MAX)
         =========================================================== */
         @media(max-width: 1100px) {
             .hero-grid, .video-grid, .contact-grid {
@@ -859,11 +859,12 @@
 
         @media(max-width: 768px) {
             section {
-                padding: 40px 0;
+                padding: 40px 0; /* Menos espacio entre secciones */
             }
             
+            /* 1. ENCABEZADO ULTRA COMPACTO */
             .navbar {
-                height: 60px !important;
+                height: 60px !important; /* Ahorramos 15px valiosos */
                 justify-content: center !important;
             }
             .logo {
@@ -874,18 +875,19 @@
                 display: none !important;
             }
             
+            /* SUBIMOS TODO HACIA EL TECHO */
             .hero {
-                padding-top: 70px !important;
+                padding-top: 70px !important; /* Antes estaba en 95px, sube 25px */
                 padding-bottom: 20px !important;
                 min-height: auto !important;
             }
             .hero-grid {
                 display: flex !important;
                 flex-direction: column !important;
-                gap: 5px !important;
+                gap: 8px !important; /* Compresión extrema de huecos vacíos */
             }
             
-            /* CONTENEDOR DE FOTO + TARJETA (Corrige el error del choque) */
+            /* 2. FOTO GIGANTE Y SUPERPUESTA */
             .hero-photo {
                 order: -1 !important;
                 width: 100% !important;
@@ -897,23 +899,23 @@
                 border: none !important;
                 box-shadow: none !important;
                 margin-top: 0 !important;
-                /* El margen positivo separa correctamente la tarjeta del título que sigue */
-                margin-bottom: 15px !important; 
+                margin-bottom: -35px !important; /* TRUCO MAGICO: La foto baja y muerde la tarjeta (ahorra 35px) */
                 position: relative !important;
             }
             
-            /* AURA DORADA (Ajustada al nuevo tamaño gigante) */
+            /* 3. FONDO REFLECTOR EJECUTIVO (EL AURA DORADA) */
             .hero-photo::before {
                 content: '';
                 position: absolute;
                 top: 45%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 250px; /* Creció para abrazar la foto gigante */
-                height: 250px;
-                background: radial-gradient(circle, rgba(201,162,77,0.32) 0%, transparent 65%);
-                z-index: 0;
+                width: 220px;
+                height: 220px;
+                background: radial-gradient(circle, rgba(201,162,77,0.35) 0%, transparent 65%);
+                z-index: 0; /* Al fondo */
             }
+            /* Línea de horizonte dorada */
             .hero-photo::after {
                 content: '';
                 position: absolute;
@@ -925,33 +927,29 @@
                 z-index: 0;
             }
 
-            /* 1. FOTO EXTRA GRANDE (Domina el pantallaso) */
             .hero-photo img {
-                width: 190px !important; /* Salto masivo de tamaño */
-                height: 190px !important;
+                width: 165px !important; /* Foto enorme e imponente */
+                height: 165px !important;
                 border-radius: 50% !important;
                 object-fit: cover !important;
                 object-position: top center !important;
-                border: 4.5px solid var(--gold) !important;
+                border: 4px solid var(--gold) !important;
                 box-shadow: 0 10px 25px rgba(0,0,0,0.8) !important;
                 position: relative;
-                z-index: 2; 
-                /* TRUCO: Solo la imagen muerde la tarjeta hacia abajo, no toda la caja */
-                margin-bottom: -45px !important; 
+                z-index: 2; /* Por encima de la tarjeta para crear el efecto superpuesto */
             }
             
-            /* TARJETA DEL PERFIL */
+            /* TARJETA DE TEXTO CENTRADO (Muerde la foto por debajo) */
             .hero-card {
                 background: linear-gradient(135deg, #0C1E36, #06101E) !important;
-                /* Espacio superior extra para acomodar la mordida de la foto gigante */
-                padding: 60px 15px 20px 15px !important; 
+                padding: 45px 15px 15px 15px !important; /* Padding superior grande para acomodar la foto que cae encima */
                 border-radius: 18px !important;
                 border: 1px solid var(--border-gold) !important;
                 box-shadow: var(--shadow-sm) !important;
                 width: 100% !important;
                 margin: 0 !important;
                 position: relative;
-                z-index: 1; 
+                z-index: 1; /* Debajo de la foto */
             }
             .hero-card h4 {
                 font-size: 18.5px !important;
@@ -960,17 +958,18 @@
                 line-height: 1.25 !important;
                 text-align: center !important;
             }
+            /* 4. DESCRIPCIÓN 100% CENTRADA */
             .hero-card p {
                 font-size: 13.5px !important;
                 line-height: 1.45 !important;
-                text-align: center !important; 
+                text-align: center !important; /* Centrado como pediste */
                 color: var(--text-gray) !important;
             }
             .hero-tag {
                 display: none !important;
             }
             
-            /* TÍTULO GANCHO (Ya no choca con nada) */
+            /* TÍTULO GANCHO (Ligeramente compacto) */
             .hero h1 {
                 font-size: 23px !important; 
                 line-height: 1.2 !important;
@@ -979,12 +978,13 @@
                 text-align: left !important;
             }
             
+            /* BOTONES MÓVIL COMPACTOS */
             .btn-group {
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
                 gap: 10px !important;
                 width: 100% !important;
-                margin-bottom: 12px !important;
+                margin-bottom: 12px !important; /* Pegamos el gancho de abajo */
             }
             .btn {
                 width: 100% !important;
@@ -997,13 +997,13 @@
                 display: none !important;
             }
             
-            /* 2 & 3. GANCHO DE EMPATÍA (LETRAS GRANDES Y CENTRADAS) */
+            /* 5. GANCHO DE EMPATÍA (Visible en primera pantalla) */
             .mobile-empathy-card {
                 display: block !important;
                 background: var(--card-bg) !important;
                 border: 1px solid var(--border-gold) !important;
                 border-left: 4px solid var(--gold) !important;
-                padding: 20px 22px !important;
+                padding: 16px 18px !important;
                 border-radius: 16px !important;
                 margin-top: 0 !important;
                 margin-bottom: 15px !important;
@@ -1011,17 +1011,17 @@
             }
             .mobile-empathy-card h3 {
                 font-family: "Playfair Display", serif !important;
-                font-size: 22px !important; /* Letras mucho más grandes */
+                font-size: 17.5px !important;
                 color: var(--gold) !important;
-                line-height: 1.3 !important;
-                margin-bottom: 10px !important;
-                text-align: center !important; /* 100% Centrado */
+                line-height: 1.25 !important;
+                margin-bottom: 8px !important;
+                text-align: left !important;
             }
             .mobile-empathy-card p {
-                font-size: 15px !important; /* Descripción también creció */
-                line-height: 1.55 !important;
+                font-size: 13px !important;
+                line-height: 1.5 !important;
                 color: var(--white) !important;
-                text-align: center !important; /* 100% Centrado */
+                text-align: left !important;
                 margin-bottom: 0 !important;
             }
             
@@ -1107,7 +1107,7 @@
                     Te ayudamos a entender tu situación y a defender tus derechos con claridad, experiencia y compromiso. Más de 18 años de trayectoria y respaldo institucional como Ex Fiscal Especializado en el Estado de México y toda la República Mexicana.
                 </p>
 
-                <!-- TARJETA DE EMPATÍA MÓVIL (Letras Grandes y Centradas) -->
+                <!-- TARJETA DE EMPATÍA MÓVIL (Tirada hacia arriba) -->
                 <div class="mobile-empathy-card">
                     <h3>¿Detuvieron a un familiar?<br>¿Estás pasando por una situación complicada?</h3>
                     <p>
