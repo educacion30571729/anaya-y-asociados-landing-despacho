@@ -11,39 +11,47 @@
     <meta name="keywords" content="abogado penalista, abogado penal, derecho penal, delitos federales, juicios orales, amparo penal, abogado ecatepec, abogado mexico">
     <meta name="author" content="Lic. Aurelio de la Cruz Anaya">
     <meta name="robots" content="index,follow,max-image-preview:large">
-    <meta name="theme-color" content="#081F3E">
-    <link rel="canonical" href="https://tudominio.com">
+    <meta name="theme-color" content="#06101E">
+    <link rel="canonical" href="https://educacion30571729.github.io/anaya-y-asociados-landing-despacho/">
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Lic. Aurelio de la Cruz Anaya | Especialista en Derecho Penal">
     <meta property="og:description" content="Tu defensa, nuestra misión. Defensa Penal Estratégica en toda la República Mexicana.">
     <meta property="og:image" content="assets/img/og-image.jpg">
     <meta property="og:locale" content="es_MX">
-    <meta property="og:url" content="https://tudominio.com">
+    <meta property="og:url" content="https://educacion30571729.github.io/anaya-y-asociados-landing-despacho/">
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lic. Aurelio de la Cruz Anaya | Especialista en Derecho Penal">
     <meta name="twitter:description" content="Especialista en Derecho Penal con más de 18 años de experiencia.">
     <meta name="twitter:image" content="assets/img/og-image.jpg">
 
+    <!-- Google Fonts: Dupla Legal de Alta Gama -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <!-- ===========================================================
+         HOJA DE ESTILOS MAESTRA: MODO OSCURO & CRO 2.0
+    =========================================================== -->
     <style>
         :root {
-            --navy: #081F3E;
+            --navy: #06101E;
+            --navy-light: #09172B;
+            --card-bg: #0C1E36;
             --gold: #C9A24D;
             --white: #FFFFFF;
-            --gray: #6E7682;
-            --text: #2A2A2A;
-            --light: #F8F9FB;
-            --border: #ECECEC;
-            --shadow-sm: 0 5px 20px rgba(0,0,0,.06);
-            --shadow-md: 0 20px 60px rgba(0,0,0,.08);
-            --shadow-xl: 0 35px 100px rgba(0,0,0,.15);
+            --text-gray: #A3B1C2;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-gold: rgba(201, 162, 77, 0.3);
+            --shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.2);
+            --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.4);
+            --shadow-xl: 0 35px 100px rgba(0, 0, 0, 0.6);
             --radius: 18px;
             --transition: .45s cubic-bezier(.4,.2,.2,1);
         }
@@ -59,11 +67,11 @@
         }
 
         body {
-            font-family: Poppins, sans-serif;
-            background: var(--white);
-            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            background: var(--navy);
+            color: var(--text-gray);
             overflow-x: hidden;
-            line-height: 1.8;
+            line-height: 1.85;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -77,58 +85,69 @@
             margin: auto;
         }
 
+        /* Títulos Imponentes en Serif */
         h1, h2, h3, h4 {
             font-family: "Playfair Display", serif;
             font-weight: 700;
-            color: var(--navy);
-            line-height: 1.15;
+            color: var(--white);
+            line-height: 1.2;
         }
 
+        /* Alineación Justificada Universal y Limpia */
         p {
-            color: var(--gray);
+            color: var(--text-gray);
             font-size: 17px;
+            text-align: justify;
+            text-justify: inter-word;
+            word-spacing: -0.5px;
+            hyphens: auto;
+            line-height: 1.85;
+        }
+
+        /* Excepciones de centrado para simetría visual de encabezados */
+        .section-subtitle, .timeline-footer p, .ecosystem-note p, 
+        .cta-emergency p, .faq-header p, .map-header p, 
+        .testimonial-header p, .practice-header p, .ecosystem-header p {
+            text-align: center;
         }
 
         section {
             padding: 120px 0;
             position: relative;
+            border-bottom: 1px solid var(--border);
         }
 
         .section-title {
-            font-size: 56px;
+            font-size: clamp(32px, 4.5vw, 56px);
             margin-bottom: 20px;
-        }
-
-        .section-subtitle {
-            max-width: 760px;
-            margin-bottom: 70px;
         }
 
         .gold {
             color: var(--gold);
         }
 
-        /* Botones */
+        /* Botones de Ventas CRO */
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 14px;
             padding: 18px 34px;
             border-radius: 60px;
-            background: var(--navy);
-            color: white;
+            background: var(--gold);
+            color: var(--navy);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             transition: var(--transition);
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 10px 25px rgba(201, 162, 77, 0.3);
             cursor: pointer;
             border: none;
         }
 
         .btn:hover {
-            background: var(--gold);
+            background: var(--white);
+            color: var(--navy);
             transform: translateY(-3px);
-            color: white;
+            box-shadow: 0 15px 35px rgba(201, 162, 77, 0.5);
         }
 
         .btn-outline {
@@ -137,16 +156,16 @@
             gap: 12px;
             padding: 18px 34px;
             border-radius: 60px;
-            border: 2px solid var(--navy);
-            color: var(--navy);
+            border: 2px solid var(--gold);
+            color: var(--white);
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition);
         }
 
         .btn-outline:hover {
-            background: var(--navy);
-            color: white;
+            background: var(--gold);
+            color: var(--navy);
         }
 
         /* Header y Navegación */
@@ -157,13 +176,14 @@
             width: 100%;
             z-index: 9999;
             transition: .4s;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(6, 16, 30, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
         }
 
         header.active {
-            background: rgba(255,255,255,.98);
-            backdrop-filter: blur(15px);
-            box-shadow: var(--shadow-sm);
+            background: rgba(6, 16, 30, 0.98);
+            box-shadow: var(--shadow-md);
         }
 
         .navbar {
@@ -177,7 +197,7 @@
             font-size: 28px;
             font-weight: 700;
             font-family: "Playfair Display", serif;
-            color: var(--navy);
+            color: var(--white);
             letter-spacing: .5px;
             text-decoration: none;
         }
@@ -195,7 +215,7 @@
         .menu a {
             text-decoration: none;
             font-weight: 500;
-            color: var(--navy);
+            color: var(--white);
             transition: .3s;
             position: relative;
         }
@@ -227,10 +247,11 @@
 
         .phone {
             font-weight: 600;
-            color: var(--navy);
+            color: var(--white);
             text-decoration: none;
         }
 
+        /* Botón WhatsApp con Efecto Latido de Urgencia */
         .whatsapp-floating {
             position: fixed;
             right: 28px;
@@ -242,10 +263,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 34px;
+            font-size: 36px;
             color: white;
             text-decoration: none;
-            box-shadow: 0 25px 60px rgba(0,0,0,.30);
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8);
+            animation: latido-emergencia 1.8s infinite cubic-bezier(0.66, 0, 0, 1);
             z-index: 99999;
             transition: .35s;
         }
@@ -255,25 +277,19 @@
             color: white;
         }
 
-        /* Hero Section */
+        @keyframes latido-emergencia {
+            to { box-shadow: 0 0 0 25px rgba(37, 211, 102, 0); }
+        }
+
+        /* Hero Section - Acondicionado para el Menú Superior */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding-top: 110px;
-            background: linear-gradient(90deg, #ffffff 0%, #ffffff 58%, #f7f8fb 58%, #f7f8fb 100%);
+            padding-top: 160px;
+            padding-bottom: 90px;
+            background: radial-gradient(circle at 80% 20%, rgba(201,162,77,.12), transparent 50%), var(--navy);
             overflow: hidden;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            right: -180px;
-            top: -180px;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(201,162,77,.18), transparent 70%);
-            border-radius: 50%;
         }
 
         .hero-grid {
@@ -289,7 +305,8 @@
             gap: 12px;
             padding: 10px 18px;
             border-radius: 50px;
-            background: #F8F8F8;
+            background: rgba(201, 162, 77, 0.15);
+            border: 1px solid var(--border-gold);
             font-size: 13px;
             font-weight: 600;
             letter-spacing: 2px;
@@ -299,13 +316,13 @@
         }
 
         .hero h1 {
-            font-size: 72px;
+            font-size: clamp(38px, 4.8vw, 68px);
             margin-bottom: 30px;
             max-width: 720px;
         }
 
         .hero p {
-            font-size: 21px;
+            font-size: 19px;
             max-width: 620px;
             margin-bottom: 45px;
         }
@@ -326,7 +343,7 @@
 
         .metric {
             padding: 24px;
-            background: white;
+            background: var(--card-bg);
             border-radius: 16px;
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border);
@@ -341,131 +358,100 @@
         .metric span {
             font-size: 14px;
             font-weight: 600;
-            color: var(--gray);
+            color: var(--text-gray);
         }
 
+        /* Foto del Hero - Sin Encimados */
         .hero-photo {
             position: relative;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
         }
 
-        .hero-photo::before {
-            content: "";
-            position: absolute;
-            width: 520px;
-            height: 520px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold), transparent);
-            opacity: .12;
-        }
-
         .hero-photo img {
-            position: relative;
-            width: 95%;
-            max-width: 520px;
+            width: 100%;
+            max-width: 500px;
             border-radius: 28px;
-            box-shadow: 0 50px 120px rgba(0,0,0,.18);
+            border: 1px solid var(--border-gold);
+            box-shadow: var(--shadow-xl);
             z-index: 2;
+            object-fit: cover;
         }
 
         .hero-card {
-            position: absolute;
-            left: -20px;
-            bottom: 40px;
-            background: white;
-            padding: 25px;
+            position: relative;
+            margin-top: 24px;
+            background: var(--card-bg);
+            padding: 28px;
             border-radius: 18px;
+            border: 1px solid var(--border-gold);
             box-shadow: var(--shadow-xl);
-            width: 290px;
+            width: 100%;
+            max-width: 500px;
             z-index: 5;
         }
 
         .hero-card h4 {
-            font-size: 20px;
+            font-size: 22px;
             margin-bottom: 10px;
+            color: var(--white);
         }
 
         .hero-card p {
-            font-size: 14px;
+            font-size: 15px;
             line-height: 1.6;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .hero-card strong {
             color: var(--gold);
         }
 
-        .scroll-indicator {
-            position: absolute;
-            left: 50%;
-            bottom: 35px;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            font-size: 12px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #9A9A9A;
-        }
-
-        .scroll-indicator span {
-            width: 2px;
-            height: 55px;
-            background: linear-gradient(transparent, var(--gold));
-            animation: scrollMove 2s infinite;
-        }
-
-        @keyframes scrollMove {
-            0% { opacity: .2; transform: translateY(-8px); }
-            50% { opacity: 1; transform: translateY(8px); }
-            100% { opacity: .2; transform: translateY(-8px); }
-        }
-
         /* Sección Authority */
         .authority {
-            background: #fff;
+            background: var(--navy);
         }
 
         .authority-grid {
             display: grid;
-            grid-template-columns: 520px 1fr;
+            grid-template-columns: 500px 1fr;
             gap: 80px;
             align-items: center;
         }
 
         .authority-photo {
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .authority-photo img {
             width: 100%;
+            max-width: 500px;
             border-radius: 24px;
+            border: 1px solid var(--border-gold);
             box-shadow: var(--shadow-xl);
+            object-fit: cover;
         }
 
         .authority-badge {
-            position: absolute;
-            right: -35px;
-            bottom: 40px;
-            background: white;
+            position: relative;
+            margin-top: 24px;
+            background: var(--card-bg);
             padding: 30px;
             border-radius: 22px;
+            border: 1px solid var(--border-gold);
             box-shadow: var(--shadow-xl);
-            width: 290px;
+            width: 100%;
+            max-width: 500px;
         }
 
         .authority-badge h3 {
             font-size: 46px;
             color: var(--gold);
             margin-bottom: 5px;
-        }
-
-        .authority-badge p {
-            font-size: 14px;
         }
 
         .authority small {
@@ -478,12 +464,8 @@
         }
 
         .authority h2 {
-            font-size: 58px;
+            font-size: clamp(32px, 4.5vw, 54px);
             margin-bottom: 30px;
-        }
-
-        .authority p {
-            margin-bottom: 25px;
         }
 
         .signature-quote {
@@ -493,7 +475,7 @@
             font-size: 22px;
             font-family: "Playfair Display", serif;
             line-height: 1.6;
-            color: var(--navy);
+            color: var(--white);
         }
 
         .credentials {
@@ -504,15 +486,16 @@
         }
 
         .credential {
-            padding: 24px;
+            padding: 28px;
             border-radius: 18px;
-            background: #fff;
+            background: var(--card-bg);
             border: 1px solid var(--border);
             transition: var(--transition);
         }
 
         .credential:hover {
             transform: translateY(-6px);
+            border-color: var(--gold);
             box-shadow: var(--shadow-md);
         }
 
@@ -532,8 +515,7 @@
 
         /* Timeline Section */
         .timeline-section {
-            background: var(--light);
-            overflow: hidden;
+            background: var(--navy-light);
         }
 
         .timeline-header {
@@ -551,15 +533,6 @@
             margin-bottom: 18px;
         }
 
-        .timeline-header h2 {
-            font-size: 58px;
-            margin-bottom: 25px;
-        }
-
-        .timeline-header p {
-            font-size: 18px;
-        }
-
         .timeline {
             position: relative;
             max-width: 950px;
@@ -574,21 +547,23 @@
             top: 0;
             bottom: 0;
             width: 3px;
-            background: linear-gradient(var(--gold), #EFE5C9, var(--gold));
+            background: linear-gradient(var(--gold), rgba(201,162,77,0.2), var(--gold));
         }
 
         .timeline-item {
             position: relative;
             margin-bottom: 70px;
             padding: 35px 35px 35px 40px;
-            background: white;
+            background: var(--card-bg);
             border-radius: 22px;
+            border: 1px solid var(--border);
             box-shadow: var(--shadow-md);
             transition: var(--transition);
         }
 
         .timeline-item:hover {
             transform: translateY(-8px);
+            border-color: var(--gold);
             box-shadow: var(--shadow-xl);
         }
 
@@ -601,14 +576,14 @@
             height: 22px;
             border-radius: 50%;
             background: var(--navy);
-            border: 6px solid white;
-            box-shadow: 0 0 0 3px var(--gold);
+            border: 5px solid var(--gold);
+            box-shadow: 0 0 15px rgba(201,162,77,0.5);
         }
 
         .timeline-year {
             display: inline-block;
             padding: 8px 16px;
-            background: rgba(201,162,77,.12);
+            background: rgba(201, 162, 77, 0.15);
             color: var(--gold);
             font-size: 13px;
             font-weight: 700;
@@ -623,31 +598,20 @@
             margin-bottom: 12px;
         }
 
-        .timeline-item p {
-            margin-bottom: 15px;
-        }
-
         .timeline-footer {
             margin-top: 70px;
             padding: 45px;
-            background: var(--navy);
+            background: #040B14;
             border-radius: 25px;
-            color: white;
+            border: 1px solid var(--border-gold);
             text-align: center;
             box-shadow: var(--shadow-xl);
         }
 
         .timeline-footer h3 {
             color: white;
-            font-size: 38px;
+            font-size: 36px;
             margin-bottom: 20px;
-        }
-
-        .timeline-footer p {
-            color: rgba(255,255,255,.85);
-            font-size: 18px;
-            max-width: 850px;
-            margin: auto;
         }
 
         .timeline-footer strong {
@@ -656,20 +620,7 @@
 
         /* Ecosistema Jurídico */
         .ecosystem {
-            background: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .ecosystem::before {
-            content: "";
-            position: absolute;
-            top: -250px;
-            right: -250px;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(201,162,77,.08), transparent 70%);
+            background: var(--navy);
         }
 
         .ecosystem-header {
@@ -688,15 +639,6 @@
             margin-bottom: 20px;
         }
 
-        .ecosystem-header h2 {
-            font-size: 56px;
-            margin-bottom: 25px;
-        }
-
-        .ecosystem-header p {
-            font-size: 18px;
-        }
-
         .ecosystem-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -704,18 +646,22 @@
         }
 
         .ecosystem-card {
-            background: white;
-            padding: 55px 40px;
+            background: var(--card-bg);
+            padding: 50px 35px;
             border-radius: 25px;
             box-shadow: var(--shadow-md);
             border: 1px solid var(--border);
             transition: var(--transition);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .ecosystem-card:hover {
             transform: translateY(-12px);
+            border-color: var(--gold);
             box-shadow: var(--shadow-xl);
         }
 
@@ -726,37 +672,33 @@
             top: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, var(--gold), var(--navy));
+            background: linear-gradient(90deg, var(--gold), transparent);
         }
 
         .logo-box {
-            height: 95px;
+            height: 90px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .logo-box img {
-            max-height: 90px;
-            max-width: 220px;
+            max-height: 80px;
+            max-width: 100%;
             object-fit: contain;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
         }
 
         .ecosystem-card h3 {
-            font-size: 30px;
+            font-size: 28px;
             margin-bottom: 20px;
             text-align: center;
         }
 
-        .ecosystem-card p {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
         .ecosystem-card ul {
             list-style: none;
-            margin-bottom: 35px;
+            margin: 25px 0 35px;
         }
 
         .ecosystem-card li {
@@ -765,10 +707,7 @@
             display: flex;
             gap: 12px;
             align-items: flex-start;
-        }
-
-        .ecosystem-card li:last-child {
-            border: none;
+            color: var(--text-gray);
         }
 
         .ecosystem-card li i {
@@ -776,7 +715,7 @@
             margin-top: 4px;
         }
 
-        .ecosystem-card a {
+        .ecosystem-card .btn {
             width: 100%;
             justify-content: center;
         }
@@ -784,23 +723,15 @@
         .ecosystem-note {
             margin-top: 80px;
             padding: 55px;
-            background: var(--navy);
+            background: #040B14;
+            border: 1px solid var(--border-gold);
             border-radius: 25px;
             text-align: center;
-            color: white;
         }
 
         .ecosystem-note h3 {
-            color: white;
-            font-size: 40px;
+            font-size: 38px;
             margin-bottom: 20px;
-        }
-
-        .ecosystem-note p {
-            color: rgba(255,255,255,.88);
-            font-size: 18px;
-            max-width: 900px;
-            margin: auto;
         }
 
         .ecosystem-note strong {
@@ -809,20 +740,7 @@
 
         /* Áreas Estratégicas (Practice) */
         .practice {
-            background: #F8F9FB;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .practice::before {
-            content: "";
-            position: absolute;
-            left: -250px;
-            bottom: -250px;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(10,34,64,.05), transparent 70%);
+            background: var(--navy-light);
         }
 
         .practice-header {
@@ -841,15 +759,6 @@
             margin-bottom: 18px;
         }
 
-        .practice-header h2 {
-            font-size: 56px;
-            margin-bottom: 25px;
-        }
-
-        .practice-header p {
-            font-size: 18px;
-        }
-
         .practice-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -857,7 +766,7 @@
         }
 
         .practice-card {
-            background: white;
+            background: var(--card-bg);
             padding: 45px;
             border-radius: 24px;
             box-shadow: var(--shadow-md);
@@ -869,24 +778,15 @@
 
         .practice-card:hover {
             transform: translateY(-12px);
+            border-color: var(--gold);
             box-shadow: var(--shadow-xl);
-        }
-
-        .practice-card::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--navy), var(--gold));
         }
 
         .practice-icon {
             width: 75px;
             height: 75px;
             border-radius: 18px;
-            background: rgba(201,162,77,.12);
+            background: rgba(201, 162, 77, 0.15);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -899,33 +799,31 @@
         }
 
         .practice-card h3 {
-            font-size: 28px;
+            font-size: 26px;
             margin-bottom: 18px;
-        }
-
-        .practice-card p {
-            margin-bottom: 30px;
         }
 
         .practice-card a {
             text-decoration: none;
             font-weight: 600;
-            color: var(--navy);
+            color: var(--gold);
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            margin-top: 15px;
             transition: .35s;
         }
 
         .practice-card a:hover {
-            color: var(--gold);
+            color: var(--white);
             transform: translateX(8px);
         }
 
         .practice-cta {
             margin-top: 80px;
             padding: 65px;
-            background: white;
+            background: var(--card-bg);
+            border: 1px solid var(--border-gold);
             border-radius: 30px;
             box-shadow: var(--shadow-xl);
             display: grid;
@@ -935,46 +833,19 @@
         }
 
         .practice-cta h3 {
-            font-size: 46px;
+            font-size: 42px;
             margin-bottom: 20px;
-        }
-
-        .practice-cta p {
-            font-size: 18px;
         }
 
         .practice-cta .btn {
             justify-content: center;
+            width: 100%;
         }
 
         /* Video Section */
         .video-section {
-            background: #071523;
-            position: relative;
-            overflow: hidden;
+            background: #040B14;
             padding: 140px 0;
-        }
-
-        .video-section::before {
-            content: "";
-            position: absolute;
-            left: -250px;
-            top: -250px;
-            width: 650px;
-            height: 650px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(201,162,77,.10), transparent 70%);
-        }
-
-        .video-section::after {
-            content: "";
-            position: absolute;
-            right: -250px;
-            bottom: -250px;
-            width: 650px;
-            height: 650px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,255,255,.05), transparent 70%);
         }
 
         .video-grid {
@@ -982,8 +853,6 @@
             grid-template-columns: 1fr 1.1fr;
             gap: 70px;
             align-items: center;
-            position: relative;
-            z-index: 5;
         }
 
         .video-info small {
@@ -996,15 +865,8 @@
         }
 
         .video-info h2 {
-            font-size: 58px;
-            color: white;
+            font-size: clamp(32px, 4.5vw, 54px);
             margin-bottom: 30px;
-        }
-
-        .video-info p {
-            font-size: 18px;
-            color: rgba(255,255,255,.82);
-            margin-bottom: 28px;
         }
 
         .video-list {
@@ -1017,7 +879,7 @@
             align-items: flex-start;
             gap: 15px;
             margin-bottom: 18px;
-            color: white;
+            color: var(--white);
         }
 
         .video-list i {
@@ -1029,7 +891,8 @@
             background: #000;
             padding: 12px;
             border-radius: 28px;
-            box-shadow: 0 40px 100px rgba(0,0,0,.45);
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 40px 100px rgba(0,0,0,.8);
         }
 
         .video-player video {
@@ -1041,10 +904,9 @@
         .video-callout {
             margin-top: 40px;
             padding: 28px;
-            background: rgba(255,255,255,.08);
-            border: 1px solid rgba(255,255,255,.12);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
             border-radius: 18px;
-            backdrop-filter: blur(10px);
         }
 
         .video-callout strong {
@@ -1054,37 +916,9 @@
             margin-bottom: 10px;
         }
 
-        .video-callout p {
-            color: rgba(255,255,255,.85);
-            margin-bottom: 20px;
-        }
-
-        .video-callout .btn {
-            background: var(--gold);
-            color: #fff;
-        }
-
-        .video-callout .btn:hover {
-            background: white;
-            color: var(--navy);
-        }
-
         /* Testimonials */
         .testimonials {
-            background: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonials::before {
-            content: "";
-            position: absolute;
-            right: -220px;
-            top: -220px;
-            width: 550px;
-            height: 550px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(201,162,77,.08), transparent 70%);
+            background: var(--navy);
         }
 
         .testimonial-header {
@@ -1103,15 +937,6 @@
             margin-bottom: 18px;
         }
 
-        .testimonial-header h2 {
-            font-size: 56px;
-            margin-bottom: 25px;
-        }
-
-        .testimonial-header p {
-            font-size: 18px;
-        }
-
         .testimonial-slider {
             display: flex;
             gap: 35px;
@@ -1128,16 +953,17 @@
         .testimonial {
             min-width: 420px;
             scroll-snap-align: start;
-            background: white;
+            background: var(--card-bg);
             padding: 45px;
             border-radius: 25px;
-            box-shadow: var(--shadow-md);
             border: 1px solid var(--border);
+            box-shadow: var(--shadow-md);
             transition: var(--transition);
         }
 
         .testimonial:hover {
             transform: translateY(-10px);
+            border-color: var(--gold);
             box-shadow: var(--shadow-xl);
         }
 
@@ -1148,9 +974,8 @@
         }
 
         .testimonial p {
-            font-size: 17px;
-            margin-bottom: 30px;
             font-style: italic;
+            margin-bottom: 30px;
         }
 
         .client {
@@ -1160,26 +985,26 @@
         }
 
         .client-avatar {
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold), var(--navy));
+            background: linear-gradient(135deg, var(--gold), var(--navy-light));
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 22px;
             color: white;
             font-weight: 700;
         }
 
         .client-info strong {
             display: block;
-            color: var(--navy);
+            color: var(--white);
         }
 
         .client-info span {
             font-size: 14px;
-            color: var(--gray);
+            color: var(--text-gray);
         }
 
         .review-button {
@@ -1187,48 +1012,33 @@
             text-align: center;
         }
 
-        .review-button .btn {
-            padding: 18px 40px;
-        }
-
         /* Llamado de Urgencia (Emergency CTA) */
         .cta-emergency {
             padding: 120px 0;
-            background: linear-gradient(135deg, #081F3E, #0F315F);
+            background: linear-gradient(135deg, #040B14, #0C1E36);
+            border-top: 1px solid var(--border-gold);
+            border-bottom: 1px solid var(--border-gold);
             text-align: center;
-            color: white;
         }
 
         .cta-emergency h2 {
-            font-size: 58px;
-            color: white;
+            font-size: clamp(34px, 4.5vw, 56px);
             margin-bottom: 25px;
         }
 
         .cta-emergency p {
             max-width: 850px;
-            margin: auto;
+            margin: 0 auto 45px;
             font-size: 20px;
-            color: rgba(255,255,255,.85);
-            margin-bottom: 45px;
         }
 
         .cta-emergency strong {
             color: var(--gold);
         }
 
-        .cta-emergency .btn {
-            background: var(--gold);
-        }
-
-        .cta-emergency .btn:hover {
-            background: white;
-            color: var(--navy);
-        }
-
         /* FAQ Section */
         .faq {
-            background: #F8F9FB;
+            background: var(--navy-light);
         }
 
         .faq-header {
@@ -1247,11 +1057,6 @@
             margin-bottom: 18px;
         }
 
-        .faq-header h2 {
-            font-size: 56px;
-            margin-bottom: 25px;
-        }
-
         .faq-container {
             max-width: 950px;
             margin: auto;
@@ -1261,9 +1066,9 @@
         }
 
         .faq-item {
-            background: white;
+            background: var(--card-bg);
             border-radius: 18px;
-            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
             overflow: hidden;
             transition: .35s;
         }
@@ -1276,7 +1081,7 @@
             cursor: pointer;
             font-weight: 600;
             font-size: 19px;
-            color: var(--navy);
+            color: var(--white);
         }
 
         .faq-question i {
@@ -1294,6 +1099,10 @@
             padding: 0 35px 30px;
         }
 
+        .faq-item.active {
+            border-color: var(--gold);
+        }
+
         .faq-item.active .faq-answer {
             max-height: 300px;
         }
@@ -1304,7 +1113,7 @@
 
         /* Contact Section */
         .contact {
-            background: white;
+            background: var(--navy);
         }
 
         .contact-grid {
@@ -1312,11 +1121,6 @@
             grid-template-columns: 1fr 480px;
             gap: 80px;
             align-items: start;
-        }
-
-        .contact h2 {
-            font-size: 58px;
-            margin-bottom: 30px;
         }
 
         .contact-data {
@@ -1329,9 +1133,9 @@
             display: flex;
             gap: 20px;
             padding: 25px;
-            background: #fff;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
             border-radius: 18px;
-            box-shadow: var(--shadow-sm);
         }
 
         .contact-box i {
@@ -1340,34 +1144,28 @@
             margin-top: 5px;
         }
 
+        .contact-box strong {
+            color: var(--white);
+            display: block;
+            margin-bottom: 5px;
+        }
+
         .contact-card {
             padding: 45px;
             border-radius: 24px;
-            background: var(--navy);
-            color: white;
+            background: #040B14;
+            border: 1px solid var(--border-gold);
             box-shadow: var(--shadow-xl);
         }
 
         .contact-card h3 {
-            color: white;
             font-size: 34px;
             margin-bottom: 20px;
-        }
-
-        .contact-card p {
-            color: rgba(255,255,255,.82);
-            margin-bottom: 30px;
         }
 
         .contact-card .btn {
             width: 100%;
             justify-content: center;
-            background: var(--gold);
-        }
-
-        .contact-card .btn:hover {
-            background: white;
-            color: var(--navy);
         }
 
         /* Map Section */
@@ -1379,24 +1177,12 @@
         .map-header {
             padding: 90px 0;
             text-align: center;
-            background: var(--navy);
-        }
-
-        .map-header h2 {
-            color: white;
-            font-size: 54px;
-            margin-bottom: 20px;
-        }
-
-        .map-header p {
-            color: rgba(255,255,255,.85);
-            max-width: 800px;
-            margin: auto;
-            font-size: 18px;
+            background: #040B14;
+            border-top: 1px solid var(--border);
         }
 
         .map-wrapper {
-            height: 550px;
+            height: 500px;
             overflow: hidden;
         }
 
@@ -1404,14 +1190,14 @@
             width: 100%;
             height: 100%;
             border: none;
-            filter: grayscale(25%) contrast(1.05);
+            filter: grayscale(80%) invert(90%) contrast(85%);
         }
 
         /* Footer */
         footer {
-            background: #061221;
+            background: #030810;
             padding: 90px 0 40px;
-            color: white;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .footer-grid {
@@ -1424,6 +1210,7 @@
             font-family: "Playfair Display", serif;
             font-size: 34px;
             margin-bottom: 25px;
+            color: var(--white);
         }
 
         .footer-logo span {
@@ -1433,7 +1220,7 @@
         .footer-title {
             font-size: 22px;
             margin-bottom: 25px;
-            color: white;
+            color: var(--white);
         }
 
         .footer-links {
@@ -1445,7 +1232,7 @@
         }
 
         .footer-links a {
-            color: rgba(255,255,255,.8);
+            color: var(--text-gray);
             text-decoration: none;
             transition: .35s;
         }
@@ -1453,11 +1240,6 @@
         .footer-links a:hover {
             color: var(--gold);
             padding-left: 8px;
-        }
-
-        .footer-about {
-            color: rgba(255,255,255,.8);
-            line-height: 1.9;
         }
 
         .footer-social {
@@ -1481,56 +1263,30 @@
 
         .footer-social a:hover {
             background: var(--gold);
+            color: var(--navy);
             transform: translateY(-4px);
         }
 
         .footer-bottom {
             margin-top: 70px;
             padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,.08);
+            border-top: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 14px;
-            color: rgba(255,255,255,.65);
+            color: rgba(255,255,255,.5);
         }
 
         /* ===========================================================
-             MEDIA QUERIES (RESPONSIVE DESIGN CONSOLIDADO)
+             MOTOR DE CONVERSIÓN & ERGONOMÍA MÓVIL (CRO RESPONSIVE)
         =========================================================== */
         @media(max-width: 1100px) {
-            .hero-grid,
-            .authority-grid,
-            .video-grid,
-            .contact-grid {
+            .hero-grid, .authority-grid, .video-grid, .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 50px;
             }
-            .hero {
-                background: white;
-            }
-            .hero h1 {
-                font-size: 54px;
-            }
-            .hero-photo {
-                margin-top: 60px;
-            }
-            .hero-card {
-                position: relative;
-                left: auto;
-                bottom: auto;
-                margin-top: -60px;
-            }
-            .authority-badge {
-                position: relative;
-                right: auto;
-                bottom: auto;
-                margin-top: -50px;
-                margin-left: auto;
-            }
-            .ecosystem-grid {
-                grid-template-columns: 1fr;
-            }
-            .practice-grid {
+            .ecosystem-grid, .practice-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .practice-cta {
@@ -1543,191 +1299,62 @@
             .menu {
                 display: none;
             }
-            .section-title {
-                font-size: 40px;
-            }
             .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width: 768px) {
+            section {
+                padding: 85px 0;
+            }
+            .hero {
+                padding-top: 135px;
+                padding-bottom: 70px;
+            }
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+                gap: 15px;
+            }
+            .hero-actions .btn, .hero-actions .btn-outline {
+                width: 100%;
+                justify-content: center;
+                padding: 18px;
+                font-size: 16px;
+            }
+            .hero-metrics {
+                grid-template-columns: 1fr 1fr;
+            }
+            .ecosystem-grid, .practice-grid, .credentials, .footer-grid {
                 grid-template-columns: 1fr;
+            }
+            .testimonial {
+                min-width: 100%;
+            }
+            .timeline {
+                padding-left: 30px;
+            }
+            .timeline-item {
+                padding: 28px 22px;
+            }
+            .timeline-item::before {
+                left: -42px;
             }
             .footer-bottom {
                 flex-direction: column;
                 gap: 15px;
                 text-align: center;
             }
-            .contact h2 {
-                font-size: 40px;
-            }
-        }
-
-        @media(max-width: 768px) {
-            section {
-                padding: 90px 0;
-            }
-            .section-title {
-                font-size: 34px;
-            }
-            .container {
-                width: 92%;
-            }
-            .hero {
-                padding-top: 120px;
-            }
-            .hero h1 {
-                font-size: 42px;
-            }
-            .hero p {
-                font-size: 18px;
-            }
-            .hero-actions {
-                flex-direction: column;
-            }
-            .hero-actions .btn,
-            .hero-actions .btn-outline {
-                justify-content: center;
-            }
-            .hero-metrics {
-                grid-template-columns: 1fr 1fr;
-            }
-            .hero-card {
-                width: 100%;
-                margin-top: 20px;
-            }
-            .authority h2,
-            .timeline-header h2,
-            .ecosystem-header h2,
-            .practice-header h2,
-            .video-info h2,
-            .testimonial-header h2,
-            .cta-emergency h2,
-            .faq-header h2 {
-                font-size: 38px;
-            }
-            .credentials {
-                grid-template-columns: 1fr;
-            }
-            .authority-badge {
-                width: 100%;
-            }
-            .timeline {
-                padding-left: 35px;
-            }
-            .timeline::before {
-                left: 10px;
-            }
-            .timeline-item {
-                padding: 30px;
-            }
-            .timeline-item::before {
-                left: -34px;
-            }
-            .timeline-footer h3,
-            .ecosystem-note h3,
-            .practice-cta h3 {
-                font-size: 30px;
-            }
-            .ecosystem-note,
-            .practice-cta {
-                padding: 35px;
-            }
-            .practice-grid {
-                grid-template-columns: 1fr;
-            }
-            .testimonial {
-                min-width: 100%;
-            }
-        }
-        /* ===========================================================
-           MODO OSCURO CINEMATOGRÁFICO (EXECUTIVE DARK MODE)
-        =========================================================== */
-        body, .hero, .authority, .ecosystem, .testimonials, .contact, .map-header {
-            background: #06101E !important;
-            color: #F0F4F8 !important;
-        }
-
-        .timeline-section, .practice, .faq {
-            background: #09172B !important;
-        }
-
-        h1, h2, h3, h4, .logo, .phone, .menu a, .faq-question {
-            color: #FFFFFF !important;
-        }
-
-        p, .hero p, .authority p, .timeline-item p, .ecosystem-card p, .practice-card p, .testimonial p, .faq-answer p, .contact-box p {
-            color: #A3B1C2 !important;
-        }
-
-        /* Tarjetas Ejecutivas en Pizarra Metálica Oscura */
-        .metric, .hero-card, .authority-badge, .credential, .timeline-item, 
-        .ecosystem-card, .practice-card, .testimonial, .faq-item, .contact-box, .practice-cta {
-            background: #0C1E36 !important;
-            border: 1px solid rgba(255, 255, 255, 0.08) !important;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
-        }
-
-        .hero-card h4, .authority-badge p, .credential h4, .timeline-item h3, 
-        .ecosystem-card h3, .practice-card h3, .client-info strong, .contact-box strong, .practice-cta h3 {
-            color: #FFFFFF !important;
-        }
-
-        /* Header y Navegación Transparente Oscura */
-        header {
-            background: rgba(6, 16, 30, 0.85) !important;
-        }
-        header.active {
-            background: rgba(6, 16, 30, 0.98) !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .menu a:hover, .logo span, .gold, .metric h3, .authority-badge h3, .credential i, .practice-icon i, .video-list i, .ecosystem-card li i, .contact-box i {
-            color: #C9A24D !important;
-        }
-
-        /* Etiquetas y Detalles Dorados */
-        .hero-tag {
-            background: rgba(201, 162, 77, 0.15) !important;
-            color: #C9A24D !important;
-            border: 1px solid rgba(201, 162, 77, 0.3) !important;
-        }
-        .signature-quote {
-            color: #FFFFFF !important;
-            border-left: 5px solid #C9A24D !important;
-        }
-
-        /* Botones Dorados de Alto Impacto */
-        .btn {
-            background: #C9A24D !important;
-            color: #06101E !important;
-            font-weight: 700 !important;
-            box-shadow: 0 10px 25px rgba(201, 162, 77, 0.3) !important;
-        }
-        .btn:hover {
-            background: #FFFFFF !important;
-            color: #06101E !important;
-            transform: translateY(-3px) !important;
-        }
-        .btn-outline {
-            border: 2px solid #C9A24D !important;
-            color: #FFFFFF !important;
-        }
-        .btn-outline:hover {
-            background: #C9A24D !important;
-            color: #06101E !important;
-        }
-
-        /* Cajas Especiales de Contraste */
-        .timeline-footer, .ecosystem-note, .contact-card {
-            background: #040B14 !important;
-            border: 1px solid rgba(201, 162, 77, 0.3) !important;
-        }
-        .cta-emergency {
-            background: linear-gradient(135deg, #08162A, #0E2442) !important;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
     </style>
 </head>
 
 <body>
 
+    <!-- ===========================================================
+         HEADER & NAVEGACIÓN
+    =========================================================== -->
     <header>
         <div class="container navbar">
             <a href="#inicio" class="logo">Aurelio <span>Anaya</span></a>
@@ -1746,10 +1373,14 @@
         </div>
     </header>
 
+    <!-- Botón Flotante con Efecto Latido de Urgencia -->
     <a href="https://wa.me/525532382924?text=Hola,%20necesito%20asesoría%20penal%20urgente" target="_blank" class="whatsapp-floating" aria-label="Contacto por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- ===========================================================
+         HERO CINEMATOGRÁFICO
+    =========================================================== -->
     <section class="hero" id="inicio">
         <div class="container hero-grid">
             <div>
@@ -1802,12 +1433,11 @@
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            DESPLAZAR
-            <span></span>
-        </div>
     </section>
 
+    <!-- ===========================================================
+         AUTORIDAD · EXPERIENCIA
+    =========================================================== -->
     <section class="authority" id="experiencia">
         <div class="container authority-grid">
             <div class="authority-photo">
@@ -1855,12 +1485,15 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         TIMELINE EJECUTIVO
+    =========================================================== -->
     <section class="timeline-section" id="trayectoria">
         <div class="container">
             <div class="timeline-header">
                 <small>TRAYECTORIA PROFESIONAL</small>
                 <h2>Conocer el Sistema Penal desde Dentro marca la diferencia.</h2>
-                <p>
+                <p class="section-subtitle">
                     Cada etapa de esta trayectoria ha contribuido a desarrollar una visión integral del Derecho Penal, permitiendo diseñar estrategias de defensa respaldadas por experiencia real.
                 </p>
             </div>
@@ -1916,56 +1549,65 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         ECOSISTEMA JURÍDICO
+    =========================================================== -->
     <section class="ecosystem" id="firmas">
         <div class="container">
             <div class="ecosystem-header">
                 <small>ECOSISTEMA JURÍDICO</small>
                 <h2>Tres Firmas. Una Misma Filosofía de Trabajo.</h2>
-                <p>
+                <p class="section-subtitle">
                     La experiencia del Lic. Aurelio de la Cruz Anaya se fortalece mediante la participación activa en distintas firmas jurídicas especializadas, permitiendo brindar una atención integral respaldada por un equipo multidisciplinario.
                 </p>
             </div>
             <div class="ecosystem-grid">
                 <div class="ecosystem-card">
-                    <div class="logo-box">
-                        <img src="assets/img/logo-anaya.png" alt="Anaya y Asociados">
+                    <div>
+                        <div class="logo-box">
+                            <img src="assets/img/logo-anaya.png" alt="Anaya y Asociados">
+                        </div>
+                        <h3>Anaya y Asociados</h3>
+                        <p>Firma orientada a la defensa penal estratégica y representación jurídica personalizada.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Derecho Penal.</li>
+                            <li><i class="fa-solid fa-check"></i> Juicios Orales.</li>
+                            <li><i class="fa-solid fa-check"></i> Delitos Federales.</li>
+                            <li><i class="fa-solid fa-check"></i> Atención inmediata.</li>
+                        </ul>
                     </div>
-                    <h3>Anaya y Asociados</h3>
-                    <p>Firma orientada a la defensa penal estratégica y representación jurídica personalizada.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Derecho Penal.</li>
-                        <li><i class="fa-solid fa-check"></i> Juicios Orales.</li>
-                        <li><i class="fa-solid fa-check"></i> Delitos Federales.</li>
-                        <li><i class="fa-solid fa-check"></i> Atención inmediata.</li>
-                    </ul>
                     <a class="btn" href="https://wa.me/525532382924">Consultar</a>
                 </div>
                 <div class="ecosystem-card">
-                    <div class="logo-box">
-                        <img src="assets/img/logo-lozano.png" alt="Lozano Guzmán Abogados">
+                    <div>
+                        <div class="logo-box">
+                            <img src="assets/img/logo-lozano.png" alt="Lozano Guzmán Abogados">
+                        </div>
+                        <h3>Lozano Guzmán Abogados</h3>
+                        <p>Despacho desde el cual se atiende un importante número de clientes con representación jurídica integral.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Litigación Estratégica.</li>
+                            <li><i class="fa-solid fa-check"></i> Representación Penal.</li>
+                            <li><i class="fa-solid fa-check"></i> Consultoría Jurídica.</li>
+                            <li><i class="fa-solid fa-check"></i> Atención Empresarial.</li>
+                        </ul>
                     </div>
-                    <h3>Lozano Guzmán Abogados</h3>
-                    <p>Despacho desde el cual se atiende un importante número de clientes con representación jurídica integral.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Litigación Estratégica.</li>
-                        <li><i class="fa-solid fa-check"></i> Representación Penal.</li>
-                        <li><i class="fa-solid fa-check"></i> Consultoría Jurídica.</li>
-                        <li><i class="fa-solid fa-check"></i> Atención Empresarial.</li>
-                    </ul>
                     <a class="btn" href="https://wa.me/525532382924">Consultar</a>
                 </div>
                 <div class="ecosystem-card">
-                    <div class="logo-box">
-                        <img src="assets/img/logo-lam.png" alt="LAM Abogados Penalistas">
+                    <div>
+                        <div class="logo-box">
+                            <img src="assets/img/logo-lam.png" alt="LAM Abogados Penalistas">
+                        </div>
+                        <h3>LAM Abogados Penalistas</h3>
+                        <p>Firma especializada exclusivamente en Derecho Penal y defensa técnica de alta especialización.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Amparo Penal.</li>
+                            <li><i class="fa-solid fa-check"></i> Defensa Penal.</li>
+                            <li><i class="fa-solid fa-check"></i> Investigación Criminal.</li>
+                            <li><i class="fa-solid fa-check"></i> Atención 24 Horas.</li>
+                        </ul>
                     </div>
-                    <h3>LAM Abogados Penalistas</h3>
-                    <p>Firma especializada exclusivamente en Derecho Penal y defensa técnica de alta especialización.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Amparo Penal.</li>
-                        <li><i class="fa-solid fa-check"></i> Defensa Penal.</li>
-                        <li><i class="fa-solid fa-check"></i> Investigación Criminal.</li>
-                        <li><i class="fa-solid fa-check"></i> Atención 24 Horas.</li>
-                    </ul>
                     <a class="btn" href="https://wa.me/525532382924">Consultar</a>
                 </div>
             </div>
@@ -1979,12 +1621,15 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         ÁREAS ESTRATÉGICAS DE PRÁCTICA
+    =========================================================== -->
     <section class="practice" id="especialidades">
         <div class="container">
             <div class="practice-header">
                 <small>ÁREAS DE PRÁCTICA</small>
                 <h2>Estrategias Jurídicas para Cada Tipo de Asunto Penal.</h2>
-                <p>
+                <p class="section-subtitle">
                     Cada procedimiento requiere un análisis distinto. Nuestra intervención comienza con la comprensión profunda del caso para diseñar una defensa técnica y personalizada.
                 </p>
             </div>
@@ -2034,7 +1679,7 @@
                     </p>
                 </div>
                 <div>
-                    <a class="btn" style="width:100%;" href="https://wa.me/525532382924?text=Necesito%20asesoría%20penal%20urgente" target="_blank">
+                    <a class="btn" href="https://wa.me/525532382924?text=Necesito%20asesoría%20penal%20urgente" target="_blank">
                         <i class="fab fa-whatsapp"></i> Hablar Ahora
                     </a>
                 </div>
@@ -2042,6 +1687,9 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         VIDEO CINEMATOGRÁFICO
+    =========================================================== -->
     <section class="video-section" id="video">
         <div class="container">
             <div class="video-grid">
@@ -2061,7 +1709,7 @@
                     <div class="video-callout">
                         <strong>¿Tiene una situación urgente?</strong>
                         <p>Si usted o un familiar acaba de ser detenido, no espere. Nuestro equipo puede intervenir inmediatamente.</p>
-                        <a class="btn" href="https://wa.me/525532382924?text=Necesito%20ayuda%20penal%20urgente" target="_blank">
+                        <a class="btn" href="https://wa.me/525532382924?text=Necesito%20ayuda%20penal%20urgente" target="_blank" style="margin-top: 10px;">
                             <i class="fab fa-whatsapp"></i> Solicitar Atención Inmediata
                         </a>
                     </div>
@@ -2076,12 +1724,15 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         TESTIMONIOS
+    =========================================================== -->
     <section class="testimonials" id="opiniones">
         <div class="container">
             <div class="testimonial-header">
                 <small>OPINIONES</small>
                 <h2>La confianza se gana. No se presume.</h2>
-                <p>La mejor carta de presentación son las experiencias compartidas por quienes confiaron en nuestra representación jurídica.</p>
+                <p class="section-subtitle">La mejor carta de presentación son las experiencias compartidas por quienes confiaron en nuestra representación jurídica.</p>
             </div>
             <div class="testimonial-slider">
                 <div class="testimonial">
@@ -2119,13 +1770,16 @@
                 </div>
             </div>
             <div class="review-button">
-                <a class="btn" href="https://www.facebook.com/AnayayAsociados/reviews" target="_blank">
+                <a class="btn-outline" href="https://www.facebook.com/AnayayAsociados/reviews" target="_blank">
                     <i class="fa-solid fa-star"></i> Ver Todas las Opiniones
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- ===========================================================
+         LLAMADO DE URGENCIA
+    =========================================================== -->
     <section class="cta-emergency">
         <div class="container">
             <h2>Cada minuto puede marcar la diferencia.</h2>
@@ -2138,12 +1792,15 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         PREGUNTAS FRECUENTES
+    =========================================================== -->
     <section class="faq" id="faq">
         <div class="container">
             <div class="faq-header">
                 <small>PREGUNTAS FRECUENTES</small>
                 <h2>Resolvemos sus dudas antes de comenzar.</h2>
-                <p>La información correcta permite tomar mejores decisions. Estas son algunas de las preguntas que recibimos con mayor frecuencia.</p>
+                <p class="section-subtitle">La información correcta permite tomar mejores decisiones. Estas son algunas de las preguntas que recibimos con mayor frecuencia.</p>
             </div>
             <div class="faq-container">
                 <div class="faq-item">
@@ -2186,6 +1843,9 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         CONTACTO
+    =========================================================== -->
     <section class="contact" id="contacto">
         <div class="container contact-grid">
             <div>
@@ -2232,11 +1892,14 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         GOOGLE MAPS
+    =========================================================== -->
     <section class="map-section">
         <div class="map-header">
             <div class="container">
                 <h2>Visítenos</h2>
-                <p>
+                <p class="section-subtitle" style="margin-bottom:0;">
                     Prolongación Avenida Central, Manzana 2, Lote 6, Colonia Llano de Morelos I, Ecatepec de Morelos, Estado de México.
                 </p>
             </div>
@@ -2247,12 +1910,15 @@
         </div>
     </section>
 
+    <!-- ===========================================================
+         FOOTER EJECUTIVO
+    =========================================================== -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <div class="footer-logo">Aurelio <span>Anaya</span></div>
-                    <p class="footer-about">
+                    <p style="font-size: 15px; margin-bottom: 20px;">
                         Especialista en Derecho Penal.<br>
                         Ex Fiscal Especializado.<br>
                         Ex Agente del Ministerio Público.<br>
@@ -2297,13 +1963,16 @@
             </div>
             <div class="footer-bottom">
                 <div>© 2026 Lic. Aurelio de la Cruz Anaya. Todos los derechos reservados.</div>
-                <div>Executive Legal Landing 2.0</div>
+                <div>Executive Legal Landing 2.0 Pro</div>
             </div>
         </div>
     </footer>
 
+    <!-- ===========================================================
+         JAVASCRIPT PREMIUM CONSOLIDADO
+    =========================================================== -->
     <script>
-        // Header con fondo al hacer scroll
+        // Header activo al hacer scroll
         const header = document.querySelector("header");
         window.addEventListener("scroll", () => {
             if (header) {
@@ -2316,7 +1985,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.animate([
-                        { opacity: 0, transform: "translateY(50px)" },
+                        { opacity: 0, transform: "translateY(40px)" },
                         { opacity: 1, transform: "translateY(0)" }
                     ], {
                         duration: 800,
@@ -2337,7 +2006,6 @@
             const question = item.querySelector(".faq-question");
             if (question) {
                 question.addEventListener("click", () => {
-                    // Cierra los demás si se desea, o simplemente alterna el actual:
                     item.classList.toggle("active");
                 });
             }
@@ -2350,7 +2018,7 @@
                 const suffix = counter.innerText.replace(/[0-9]/g, '');
                 let end = parseInt(valueText) || 0;
                 let current = 0;
-                let speed = Math.max(1, Math.ceil(end / 40));
+                let speed = Math.max(1, Math.ceil(end / 35));
                 
                 if (end > 0) {
                     counter.innerText = "0" + suffix;
@@ -2367,7 +2035,6 @@
             });
         };
 
-        // Iniciar contadores una vez que cargue el documento
         window.addEventListener("DOMContentLoaded", startCounters);
 
         // Desplazamiento Suave (Smooth Scroll)
