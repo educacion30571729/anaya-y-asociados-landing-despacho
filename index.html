@@ -12,27 +12,21 @@
     <meta name="author" content="Lic. Aurelio de la Cruz Anaya">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#06101E">
-    <link rel="canonical" href="https://educacion30571729.github.io/anaya-y-asociados-landing-despacho/">
+    <link rel="canonical" href="https://educacion30571729.github.io/PAGINA-ANAYA-ASOCIADOS-1/">
 
-    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Anaya y Asociados | Defensa Penal Estratégica">
     <meta property="og:description" content="Cuando más lo necesitas, la estrategia correcta puede cambiarlo todo. Más de 18 años de experiencia y respaldo institucional.">
     <meta property="og:image" content="assets/img/aurelio-anaya.webp">
     <meta property="og:locale" content="es_MX">
-    <meta property="og:url" content="https://educacion30571729.github.io/anaya-y-asociados-landing-despacho/">
+    <meta property="og:url" content="https://educacion30571729.github.io/PAGINA-ANAYA-ASOCIADOS-1/">
 
-    <!-- Google Fonts: Dupla Legal de Alta Gama -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- ===========================================================
-         HOJA DE ESTILOS MAESTRA: CRO 2.0 & DISEÑO EXECUTIVE DARK
-    =========================================================== -->
     <style>
         :root {
             --navy: #06101E;
@@ -87,7 +81,7 @@
             line-height: 1.25;
         }
 
-        /* Justificación Editorial Universal */
+        /* Justificación Editorial Universal en Escritorio */
         p {
             color: var(--text-gray);
             font-size: 17px;
@@ -99,9 +93,9 @@
         }
 
         /* Excepciones de centrado para simetría en encabezados de sección */
-        .section-subtitle, .empathy-box p, .step-card p, .cta-emergency p, 
+        .section-subtitle, .empathy-box p, .step-card p, .cta-final p, 
         .faq-header p, .map-header p, .testimonial-header p, .practice-header p, 
-        .ecosystem-header p, .hero-trust p {
+        .ecosystem-header p, .hero-trust p, .trust-item p {
             text-align: center;
         }
 
@@ -122,7 +116,7 @@
             display: flex;
             gap: 16px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .btn {
@@ -323,7 +317,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 25px;
             border-top: 1px solid var(--border);
             padding-top: 25px;
         }
@@ -343,7 +337,7 @@
             font-size: 20px;
         }
 
-        /* Foto Hero sin encimados */
+        /* Foto Hero sin encimados en Escritorio */
         .hero-photo {
             display: flex;
             flex-direction: column;
@@ -380,6 +374,7 @@
             font-size: 14px;
             line-height: 1.6;
             margin-bottom: 0;
+            text-align: left;
         }
 
         /* ===========================================================
@@ -785,6 +780,7 @@
         .faq-answer p {
             padding: 0 30px 25px;
             margin-bottom: 0;
+            text-align: left;
         }
 
         .faq-item.active {
@@ -881,7 +877,7 @@
         }
 
         /* ===========================================================
-             ERGONOMÍA MÓVIL (CRO RESPONSIVE 2.0)
+             SISTEMA CRO RESPONSIVE: TARJETA COMPACTA EN MÓVIL
         =========================================================== */
         @media(max-width: 1100px) {
             .hero-grid, .video-grid, .contact-grid {
@@ -910,24 +906,72 @@
                 padding: 75px 0;
             }
             .hero {
-                padding-top: 130px;
-                padding-bottom: 60px;
+                padding-top: 105px !important;
+                padding-bottom: 50px !important;
+                min-height: auto !important;
             }
+            /* MAGIA CRO: Inversión de orden. La foto sube al #1 en el móvil */
+            .hero-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 20px !important;
+            }
+            .hero-photo {
+                order: -1 !important; /* Coloca tu foto y cargo justo arriba en celular */
+                width: 100% !important;
+                margin-bottom: 10px !important;
+            }
+            .hero-photo img {
+                width: 100% !important;
+                height: 250px !important; /* Altura ejecutiva compacta */
+                object-fit: cover !important;
+                object-position: top center !important; /* Enfoque en tu rostro y traje */
+                border-radius: 20px !important;
+                box-shadow: var(--shadow-xl) !important;
+            }
+            .hero-card {
+                margin-top: -25px !important;
+                padding: 16px 20px !important;
+                width: 94% !important;
+                border-radius: 14px !important;
+                z-index: 10 !important;
+            }
+            .hero-card h4 {
+                font-size: 16px !important;
+                margin-bottom: 4px !important;
+            }
+            .hero-card p {
+                font-size: 12.5px !important;
+                line-height: 1.4 !important;
+            }
+            .hero h1 {
+                font-size: 28px !important;
+                line-height: 1.25 !important;
+                margin-bottom: 15px !important;
+            }
+            .hero p {
+                font-size: 15px !important;
+                line-height: 1.6 !important;
+                margin-bottom: 25px !important;
+            }
+            /* Botones de contacto 100% visibles al instante en pantalla móvil */
             .btn-group {
-                flex-direction: column;
-                width: 100%;
-                gap: 14px;
+                display: flex !important;
+                flex-direction: column !important;
+                width: 100% !important;
+                gap: 12px !important;
+                margin-bottom: 25px !important;
             }
             .btn {
-                width: 100%;
-                padding: 18px;
-                font-size: 16px;
+                width: 100% !important;
+                padding: 16px !important;
+                font-size: 16px !important;
             }
             .practice-grid, .trust-grid, .process-grid, .hero-trust {
                 grid-template-columns: 1fr;
             }
             p {
-                text-align: left !important; /* Facilita lectura rápida en celular */
+                text-align: left !important; /* Elimina huecos blancos incómodos en móvil */
                 font-size: 16px;
             }
             .empathy-box {
@@ -939,9 +983,6 @@
 
 <body>
 
-    <!-- ===========================================================
-         HEADER & NAVEGACIÓN
-    =========================================================== -->
     <header>
         <div class="container navbar">
             <a href="#inicio" class="logo">Anaya <span>y Asociados</span></a>
@@ -962,14 +1003,10 @@
         </div>
     </header>
 
-    <!-- Botón Flotante con Efecto Latido -->
     <a href="https://wa.me/525532382924?text=Hola,%20necesito%20asesoría%20penal%20urgente" target="_blank" class="whatsapp-floating" aria-label="Contacto por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- ===========================================================
-         1. HERO SECTION (ENCABEZADO DE ALTA CONVERSIÓN)
-    =========================================================== -->
     <section class="hero" id="inicio">
         <div class="container hero-grid">
             <div>
@@ -979,504 +1016,10 @@
                 <h1>
                     Cuando más lo necesitas, <strong class="gold">la estrategia correcta</strong> puede cambiarlo todo.
                 </h1>
-                <p>
-                    Te ayudamos a entender tu situación y a defender tus derechos con claridad, experiencia y compromiso. Más de 18 años de trayectoria y respaldo institucional como Ex Fiscal Especializado en el Estado de México y toda la República Mexicana.
-                </p>
                 
-                <!-- Tríada de Botones del Mapa Visual -->
                 <div class="btn-group">
                     <a class="btn btn-gold" href="https://wa.me/525532382924?text=Quiero%20hablar%20con%20un%20abogado" target="_blank">
                         <i class="fab fa-whatsapp"></i> Quiero hablar con un abogado
                     </a>
                     <a class="btn btn-navy" href="tel:5532382924">
-                        <i class="fa-solid fa-phone"></i> Llamar Ahora
-                    </a>
-                    <a class="btn btn-outline" href="#contacto">
-                        <i class="fa-solid fa-calendar-check"></i> Agendar una consulta
-                    </a>
-                </div>
-
-                <div class="hero-trust">
-                    <div><i class="fa-solid fa-user-shield"></i><span>Atención Personalizada</span></div>
-                    <div><i class="fa-solid fa-comments"></i><span>Comunicación Clara</span></div>
-                    <div><i class="fa-solid fa-scale-balanced"></i><span>Estrategias Efectivas</span></div>
-                    <div><i class="fa-solid fa-lock"></i><span>Confidencialidad Garantizada</span></div>
-                </div>
-            </div>
-
-            <!-- Fotografía y Tarjeta Directiva sin Encimados -->
-            <div class="hero-photo">
-                <img src="assets/img/aurelio-anaya.webp" alt="Lic. Aurelio de la Cruz Anaya">
-                <div class="hero-card">
-                    <h4>Lic. Aurelio de la Cruz Anaya</h4>
-                    <p>
-                        Socio Director de <strong>Anaya y Asociados</strong>.<br>
-                        Ex Fiscal Especializado y Ex Agente del Ministerio Público.<br>
-                        Socio Fundador de Lozano Guzmán Abogados y LAM Abogados.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===========================================================
-         2. IDENTIFICACIÓN DEL PROBLEMA (EMPATÍA)
-    =========================================================== -->
-    <section class="empathy-section">
-        <div class="container">
-            <div class="empathy-box">
-                <h2>¿Detuvieron a un familiar?<br>¿Estás pasando por una situación complicada?</h2>
-                <p>
-                    No sabes en quién confiar, ni qué hacer. El miedo, la incertidumbre y las dudas son completamente normales. Enfrentar el sistema penal puede resultar abrumador, pero no tienes que pasar por esto solo. Estamos aquí para orientarte desde el primer momento con honestidad y absoluta claridad técnica.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===========================================================
-         3. VIDEO DE PRESENTACIÓN & 4. MENSAJE EMPÁTICO
-    =========================================================== -->
-    <section class="video-empathy">
-        <div class="container video-grid">
-            <div class="video-player">
-                <video controls poster="assets/img/poster-video.webp" preload="metadata">
-                    <source src="assets/video/video-institucional.mp4" type="video/mp4">
-                    Su navegador no soporta la reproducción de video.
-                </video>
-            </div>
-            <div class="empathy-list">
-                <small class="gold" style="letter-spacing: 3px; font-weight: 600; display: block; margin-bottom: 10px;">CONÓCENOS</small>
-                <h2>Estamos para ayudarte.</h2>
-                <p>
-                    En este breve mensaje te explicamos cómo podemos ayudarte y por qué cada caso es fundamental para nuestro despacho. Reducimos la ansiedad con respuestas directas y estrategias jurídicas reales.
-                </p>
-                <ul class="empathy-points">
-                    <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span><strong>No tener a quién acudir</strong> en una emergencia legal es más común de lo que crees.</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span><strong>Si no sabes qué tipo de abogado necesitas,</strong> estamos preparados para orientarte sin tecnicismos complejos.</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span><strong>Escuchamos tu caso con atención,</strong> te explicamos todas tus opciones legales y te acompañamos en cada paso del proceso.</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span><strong>Tu tranquilidad y la de tu familia</strong> también son nuestra prioridad fundamental.</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===========================================================
-         5. SITUACIONES EN LAS QUE PODEMOS AYUDARTE
-    =========================================================== -->
-    <section class="practice" id="situaciones">
-        <div class="container">
-            <div class="practice-header">
-                <small>ESPECIALIDADES</small>
-                <h2>Situaciones en las que podemos ayudarte</h2>
-                <p class="section-subtitle">Si te identificas con alguna de las siguientes circunstancias, podemos orientarte y tomar la defensa de tu asunto de inmediato.</p>
-            </div>
-            <div class="practice-grid">
-                <div class="practice-card">
-                    <div class="practice-icon"><i class="fa-solid fa-handcuffs"></i></div>
-                    <h3>Detención de un familiar</h3>
-                    <p>Intervención urgente ante el Ministerio Público o Fiscalía para proteger sus derechos constitucionales desde las primeras horas.</p>
-                </div>
-                <div class="practice-card">
-                    <div class="practice-icon"><i class="fa-solid fa-file-shield"></i></div>
-                    <h3>Denuncia o acusación</h3>
-                    <p>Diseño de estrategia legal sólida si has sido denunciado o acusado de un delito ante las autoridades.</p>
-                </div>
-                <div class="practice-card">
-                    <div class="practice-icon"><i class="fa-solid fa-building-columns"></i></div>
-                    <h3>Citación en fiscalía</h3>
-                    <p>Te acompañamos y asesoramos en comparecencias y audiencias iniciales para evitar que declares en tu contra.</p>
-                </div>
-                <div class="practice-card">
-                    <div class="practice-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <h3>Investigación penal</h3>
-                    <p>Análisis minucioso de carpetas de investigación y recolección de pruebas de descargo para tu defensa.</p>
-                </div>
-                <div class="practice-card">
-                    <div class="practice-icon"><i class="fa-solid fa-scale-unbalanced"></i></div>
-                    <h3>Delitos que no cometiste</h3>
-                    <p>Defensa técnica agresiva contra acusaciones falsas o fabricación de culpables en el sistema judicial.</p>
-                </div>
-                <div class="practice-card">
-                    <div class="practice-icon"><i class="fa-solid fa-gavel"></i></div>
-                    <h3>Amparos penales</h3>
-                    <p>Trámite urgente de amparos contra órdenes de aprehensión, cateos ilegales o abusos de autoridad.</p>
-                </div>
-                <div class="practice-card">
-                    <div class="practice-icon"><i class="fa-solid fa-people-roof"></i></div>
-                    <h3>Violencia familiar</h3>
-                    <p>Representación jurídica discreta, técnica y altamente especializada en controversias del ámbito familiar y penal.</p>
-                </div>
-                <div class="practice-card">
-                    <div class="practice-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Asesoría preventiva</h3>
-                    <p>Consultoría legal y blindaje jurídico para personas o empresas antes de que se inicie un conflicto penal.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===========================================================
-         6. ¿POR QUÉ CONFIAR EN ANAYA Y ASOCIADOS? (RESPALDO 3 FIRMAS)
-    =========================================================== -->
-    <section class="trust-section" id="respaldo">
-        <div class="container">
-            <div class="practice-header">
-                <small>CREDIBILIDAD Y TRAYECTORIA</small>
-                <h2>¿Por qué confiar en Anaya y Asociados?</h2>
-                <p class="section-subtitle">Generamos credibilidad con hechos, experiencia institucional demostrada y sin promesas falsas.</p>
-            </div>
-
-            <!-- Los 5 Pilares del Mapa Visual -->
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <i class="fa-solid fa-award"></i>
-                    <h4>Experiencia Real</h4>
-                    <p>Más de 18 años dedicados exclusivamente al litigio y al Derecho Penal en México.</p>
-                </div>
-                <div class="trust-item">
-                    <i class="fa-solid fa-chess-knight"></i>
-                    <h4>Estrategias Personalizadas</h4>
-                    <p>Cada asunto es único; diseñamos defensas a la medida con visión técnica procesal.</p>
-                </div>
-                <div class="trust-item">
-                    <i class="fa-solid fa-comments-dollar"></i>
-                    <h4>Comunicación Clara</h4>
-                    <p>Te informamos cada avance de tu caso en un lenguaje directo, honesto y comprensible.</p>
-                </div>
-                <div class="trust-item">
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    <h4>Compromiso Total</h4>
-                    <p>Asumimos la defensa de tu libertad como el compromiso más serio de nuestra profesión.</p>
-                </div>
-                <div class="trust-item">
-                    <i class="fa-solid fa-lock"></i>
-                    <h4>Confidencialidad</h4>
-                    <p>Absoluta discreción y secreto profesional blindado en todo el manejo de tu información.</p>
-                </div>
-            </div>
-
-            <!-- Ecosistema de 3 Firmas -->
-            <div class="ecosystem-container">
-                <div class="practice-header" style="margin-bottom: 50px;">
-                    <small class="gold">ALIANZA ESTRATÉGICA</small>
-                    <h3>Tres Firmas. Una Misma Filosofía de Trabajo.</h3>
-                    <p class="section-subtitle">La experiencia del Lic. Aurelio de la Cruz Anaya se respalda mediante el liderazgo y la fundación de tres prestigiosas firmas jurídicas en la República Mexicana.</p>
-                </div>
-                <div class="ecosystem-grid">
-                    <div class="ecosystem-card">
-                        <div>
-                            <div class="logo-box">
-                                <img src="assets/img/logo-anaya.png" alt="Anaya y Asociados">
-                            </div>
-                            <h3>Anaya y Asociados</h3>
-                            <p>Despacho fundador en Ecatepec, orientado a la defensa penal estratégica y atención inmediata en emergencias.</p>
-                            <ul>
-                                <li><i class="fa-solid fa-check"></i> Litigio Penal Acusatorio.</li>
-                                <li><i class="fa-solid fa-check"></i> Delitos del Fuero Común.</li>
-                                <li><i class="fa-solid fa-check"></i> Atención a Detenidos 24/7.</li>
-                            </ul>
-                        </div>
-                        <a class="btn btn-outline" style="width:100%;" href="https://wa.me/525532382924">Consultar</a>
-                    </div>
-                    <div class="ecosystem-card">
-                        <div>
-                            <div class="logo-box">
-                                <img src="assets/img/logo-lozano.png" alt="Lozano Guzmán Abogados">
-                            </div>
-                            <h3>Lozano Guzmán Abogados</h3>
-                            <p>Firma co-fundada por el Lic. Anaya, brindando representación jurídica integral a empresas y particulares.</p>
-                            <ul>
-                                <li><i class="fa-solid fa-check"></i> Consultoría y Prevención.</li>
-                                <li><i class="fa-solid fa-check"></i> Delitos Patrimoniales.</li>
-                                <li><i class="fa-solid fa-check"></i> Litigio Corporativo.</li>
-                            </ul>
-                        </div>
-                        <a class="btn btn-outline" style="width:100%;" href="https://wa.me/525532382924">Consultar</a>
-                    </div>
-                    <div class="ecosystem-card">
-                        <div>
-                            <div class="logo-box">
-                                <img src="assets/img/logo-lam.png" alt="LAM Abogados Penalistas">
-                            </div>
-                            <h3>LAM Abogados Penalistas</h3>
-                            <p>Alianza de alta especialización enfocada en delitos de alto impacto, fuero federal y amparo constitucional.</p>
-                            <ul>
-                                <li><i class="fa-solid fa-check"></i> Delitos Federales.</li>
-                                <li><i class="fa-solid fa-check"></i> Juicios de Amparo.</li>
-                                <li><i class="fa-solid fa-check"></i> Cobertura Nacional.</li>
-                            </ul>
-                        </div>
-                        <a class="btn btn-outline" style="width:100%;" href="https://wa.me/525532382924">Consultar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===========================================================
-         7. ASÍ TRABAJAMOS (PROCESO EN 4 PASOS)
-    =========================================================== -->
-    <section class="process-section" id="proceso">
-        <div class="container">
-            <div class="practice-header">
-                <small>PROCESO SIMPLE Y CLARO</small>
-                <h2>Así trabajamos contigo</h2>
-                <p class="section-subtitle">Un método paso a paso diseñado para eliminar la incertidumbre y darte seguridad desde el primer momento.</p>
-            </div>
-            <div class="process-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Escuchamos tu caso</h3>
-                    <p>Nos reunimos o conversamos por teléfono para entender los hechos sin juzgar y con total confidencialidad.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>Analizamos tu situación</h3>
-                    <p>Revisamos la carpeta de investigación y evaluamos el escenario legal real con honestidad absoluta.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>Diseñamos la estrategia</h3>
-                    <p>Construimos una defensa técnica sólida adaptada específicamente a las circunstancias de tu asunto.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h3>Te representamos</h3>
-                    <p>Asumimos la defensa jurídica ante juzgados, fiscalías o tribunales, acompañándote hasta la conclusión.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===========================================================
-         8. LO QUE DICEN NUESTROS CLIENTES (TESTIMONIOS)
-    =========================================================== -->
-    <section class="testimonials" id="opiniones">
-        <div class="container">
-            <div class="practice-header">
-                <small>TESTIMONIOS REALES</small>
-                <h2>Lo que dicen nuestros clientes</h2>
-                <p class="section-subtitle">Historias breves y reales de personas y familias que confiaron su libertad y tranquilidad en nuestras manos.</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p>"Me explicaron todo con suma claridad y siempre estuvieron conmigo en cada audiencia. Su experiencia como Ex Fiscal se nota desde el primer día. Los recomiendo ampliamente."</p>
-                    <div class="client-info">
-                        <strong>Cliente Satisfecho</strong>
-                        <span>Reseña Verificada</span>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p>"Atendieron la detención de mi familiar con mucha profesionalidad, rapidez y sobre todo humanidad. Nos devolvieron la tranquilidad en una noche terrible. Gracias, Licenciado."</p>
-                    <div class="client-info">
-                        <strong>Cliente Satisfecho</strong>
-                        <span>Reseña Verificada</span>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p>"Desde el primer día me dieron confianza y claridad en todo el proceso de defensa. Excelente atención, siempre disponibles en WhatsApp y muy profesionales en el juzgado."</p>
-                    <div class="client-info">
-                        <strong>Cliente Satisfecho</strong>
-                        <span>Reseña Verificada</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===========================================================
-         9. PREGUNTAS FRECUENTES (FAQ)
-    =========================================================== -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="practice-header">
-                <small>RESOLVEMOS DUDAS</small>
-                <h2>Preguntas frecuentes</h2>
-                <p class="section-subtitle">Respuestas claras, directas y sin tecnicismos legales para brindarte tranquilidad inmediata.</p>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>¿Qué hago si detuvieron a un familiar?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Mantén la calma y comunícate con nosotros de inmediato. Es vital que el detenido no rinda ninguna declaración sin la presencia de su abogado defensor para evitar que se autoincrimine.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>¿Me pueden detener por una denuncia?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Depende del delito y de si existe una orden de aprehensión citada por un juez o si se trata de flagrancia. Si fuiste denunciado, podemos tramitar un amparo o presentarnos a la carpeta de investigación para conocer los cargos.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>¿Debo declarar sin abogado?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p><strong>Bajo ninguna circunstancia.</strong> Tienes el derecho constitucional a guardar silencio y a ser asistido por un abogado penalista profesional antes de firmar o decir cualquier palabra ante el Ministerio Público.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>¿Qué es un amparo penal y para qué sirve?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Es un recurso judicial que te protege contra abusos de autoridad, detenciones ilegales, órdenes de aprehensión arbitrarias o cateos sin orden judicial, protegiendo tu libertad mientras se resuelve el asunto.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>¿Qué pasa si soy inocente y me acusan?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>La inocencia debe demostrarse con técnica jurídica y pruebas sólidas dentro del procedimiento. No basta con decir la verdad; se requiere una estrategia activa para desmontar la acusación del Ministerio Público.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>¿Tienen cobertura en toda la República Mexicana?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sí. Aunque nuestra oficina principal se ubica en Ecatepec, Estado de México, litigamos asuntos del fuero común y federal en toda la República Mexicana.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===========================================================
-         10. LLAMADO FINAL A LA ACCIÓN & CONTACTO DIRECTO
-    =========================================================== -->
-    <section class="cta-final" id="contacto">
-        <div class="container">
-            <h2>No enfrentes este momento solo.</h2>
-            <p>
-                Hablar con un abogado penalista con más de 18 años de experiencia puede darte la claridad, las opciones y la tranquilidad que necesitas en este momento. <strong>Da el primer paso hoy.</strong>
-            </p>
-            <div class="btn-group" style="justify-content: center;">
-                <a class="btn btn-gold" href="https://wa.me/525532382924?text=Hola,%20quiero%20dar%20el%20primer%20paso%20y%20asesorarme" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a class="btn btn-navy" href="tel:5532382924">
-                    <i class="fa-solid fa-phone"></i> Llamar ahora
-                </a>
-                <a class="btn btn-outline" href="https://wa.me/525532382924?text=Quiero%20agendar%20una%20consulta">
-                    <i class="fa-solid fa-calendar-check"></i> Agendar consulta
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-section">
-        <div class="container contact-grid">
-            <div>
-                <small class="gold" style="letter-spacing: 3px; font-weight: 600; display: block; margin-bottom: 15px;">UBICACIÓN Y DATOS</small>
-                <h2 style="font-size: 36px; margin-bottom: 20px;">Contacto Directo</h2>
-                <p style="margin-bottom: 30px;">Estamos disponibles en nuestros canales oficiales para atenderte con la discreción y urgencia que tu caso requiere.</p>
-                
-                <div class="contact-box">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <strong>Despacho Principal</strong>
-                        <span>Prolongación Avenida Central Mz. 2, Lt. 6, Col. Llano de Morelos I, Ecatepec de Morelos, Estado de México, C.P. 55070.</span>
-                    </div>
-                </div>
-                <div class="contact-box">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <strong>Teléfonos de Emergencia / WhatsApp</strong>
-                        <span>55 3238 2924 / 55 4046 4927</span>
-                    </div>
-                </div>
-                <div class="contact-box">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div>
-                        <strong>Correo Electrónico Oficial</strong>
-                        <span>adlabogado@gmail.com</span>
-                    </div>
-                </div>
-            </div>
-            <div class="map-wrapper">
-                <iframe loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=Prolongacion+Avenida+Central+Manzana+2+Lote+6+Llano+de+Morelos+I+Ecatepec+de+Morelos&t=&z=16&ie=UTF8&iwloc=&output=embed" title="Ubicación de Anaya y Asociados en Ecatepec de Morelos">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===========================================================
-         FOOTER EJECUTIVO
-    =========================================================== -->
-    <footer>
-        <div class="container">
-            <p style="margin-bottom: 15px; text-align: center; font-size: 16px;">
-                <strong class="gold" style="font-size: 20px; font-family: 'Playfair Display', serif;">ANAYA Y ASOCIADOS</strong><br>
-                Defensa Penal Estratégica | Lic. Aurelio de la Cruz Anaya
-            </p>
-            <p style="color: rgba(255,255,255,0.4); text-align: center; font-size: 13px;">
-                © 2026 Lic. Aurelio de la Cruz Anaya. Todos los derechos reservados.<br>
-                Despacho en Ecatepec de Morelos, Estado de México | Cobertura en toda la República Mexicana.
-            </p>
-        </div>
-    </footer>
-
-    <!-- ===========================================================
-         JAVASCRIPT DE ALTO RENDIMIENTO (CRO)
-    =========================================================== -->
-    <script>
-        // Sombra en el menú al hacer scroll
-        const header = document.querySelector("header");
-        window.addEventListener("scroll", () => {
-            if (header) {
-                header.classList.toggle("active", window.scrollY > 30);
-            }
-        });
-
-        // Acordeón para Preguntas Frecuentes
-        document.querySelectorAll(".faq-item").forEach(item => {
-            const question = item.querySelector(".faq-question");
-            if (question) {
-                question.addEventListener("click", () => {
-                    item.classList.toggle("active");
-                });
-            }
-        });
-
-        // Desplazamiento Suave (Smooth Scroll)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener("click", function(e) {
-                const targetId = this.getAttribute("href");
-                if (targetId !== "#" && document.querySelector(targetId)) {
-                    e.preventDefault();
-                    document.querySelector(targetId).scrollIntoView({
-                        behavior: "smooth"
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                        <i class="fa-solid
