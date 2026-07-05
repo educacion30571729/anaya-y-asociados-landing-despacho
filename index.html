@@ -80,9 +80,10 @@
             line-height: 1.25;
         }
 
+        /* TEXTOS PÁRRAFO GENERAL: Justificados Universalmente */
         p {
             color: var(--text-gray);
-            font-size: 17px;
+            font-size: 16px;
             text-align: justify;
             text-justify: inter-word;
             word-spacing: -0.5px;
@@ -90,9 +91,20 @@
             line-height: 1.85;
         }
 
-        .section-subtitle, .empathy-box p, .step-card p, .cta-final p, 
+        /* TÍTULOS PEQUEÑOS DORADOS (Más Grandes y Resaltados) */
+        .practice-header small, small.gold {
+            display: block;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 700 !important;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 15px !important; /* Tamaño aumentado */
+        }
+
+        .section-subtitle, .empathy-box p, .cta-final p, 
         .faq-header p, .map-header p, .testimonial-header p, .practice-header p, 
-        .ecosystem-header p, .hero-trust p, .trust-item p {
+        .ecosystem-header p, .trust-item p {
             text-align: center;
         }
 
@@ -297,7 +309,7 @@
         }
 
         .hero-trust div {
-            font-size: 13px;
+            font-size: 14.5px;
             font-weight: 600;
             color: var(--white);
             display: flex;
@@ -444,20 +456,6 @@
             margin: 0 auto 70px;
         }
 
-        .practice-header small {
-            display: block;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-weight: 600;
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
-
-        .practice-header h2 {
-            font-size: clamp(30px, 4vw, 48px);
-            margin-bottom: 15px;
-        }
-
         .practice-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -501,13 +499,6 @@
             color: var(--white);
         }
 
-        .practice-card p {
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 0;
-            text-align: center;
-        }
-
         .trust-section {
             background: var(--navy);
         }
@@ -536,13 +527,6 @@
         .trust-item h4 {
             font-size: 18px;
             margin-bottom: 10px;
-        }
-
-        .trust-item p {
-            font-size: 14px;
-            line-height: 1.5;
-            text-align: center;
-            margin-bottom: 0;
         }
 
         .ecosystem-container {
@@ -643,12 +627,6 @@
         .step-card h3 {
             font-size: 20px;
             margin-bottom: 12px;
-        }
-
-        .step-card p {
-            font-size: 15px;
-            text-align: center;
-            margin-bottom: 0;
         }
 
         .testimonials {
@@ -762,13 +740,6 @@
             margin-bottom: 20px;
         }
 
-        .cta-final p {
-            max-width: 750px;
-            margin: 0 auto 40px;
-            font-size: 19px;
-            text-align: center;
-        }
-
         .contact-section {
             background: var(--navy);
             padding: 80px 0 0;
@@ -827,7 +798,7 @@
         }
 
         /* ===========================================================
-             SISTEMA CRO RESPONSIVE: MÓVIL 4.3 (Tamaños + Solapamiento Corregido)
+             SISTEMA CRO RESPONSIVE: MÓVIL 4.4 (Pulido Tipográfico)
         =========================================================== */
         @media(max-width: 1100px) {
             .hero-grid, .video-grid, .contact-grid {
@@ -879,7 +850,20 @@
                 gap: 5px !important;
             }
             
-            /* CONTENEDOR DE FOTO + TARJETA (Corrige el error del choque) */
+            /* TÍTULOS DORADOS MÓVIL (Más grandes) */
+            .practice-header small, small.gold {
+                font-size: 14.5px !important;
+                letter-spacing: 2px !important;
+                margin-bottom: 12px !important;
+            }
+
+            /* TODOS LOS PÁRRAFOS MÓVIL JUSTIFICADOS Y SEMI-PEQUEÑOS */
+            p, .empathy-list p, .practice-card p, .trust-item p, .step-card p, .hero-card p, .mobile-empathy-card p {
+                text-align: justify !important;
+                font-size: 15px !important; 
+            }
+
+            /* CONTENEDOR DE FOTO + TARJETA */
             .hero-photo {
                 order: -1 !important;
                 width: 100% !important;
@@ -891,19 +875,18 @@
                 border: none !important;
                 box-shadow: none !important;
                 margin-top: 0 !important;
-                /* El margen positivo separa correctamente la tarjeta del título que sigue */
                 margin-bottom: 15px !important; 
                 position: relative !important;
             }
             
-            /* AURA DORADA (Ajustada al nuevo tamaño gigante) */
+            /* AURA DORADA */
             .hero-photo::before {
                 content: '';
                 position: absolute;
                 top: 45%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 250px; /* Creció para abrazar la foto gigante */
+                width: 250px;
                 height: 250px;
                 background: radial-gradient(circle, rgba(201,162,77,0.32) 0%, transparent 65%);
                 z-index: 0;
@@ -919,9 +902,9 @@
                 z-index: 0;
             }
 
-            /* 1. FOTO EXTRA GRANDE (Domina el pantallaso) */
+            /* FOTO EXTRA GRANDE */
             .hero-photo img {
-                width: 190px !important; /* Salto masivo de tamaño */
+                width: 190px !important;
                 height: 190px !important;
                 border-radius: 50% !important;
                 object-fit: cover !important;
@@ -930,14 +913,12 @@
                 box-shadow: 0 10px 25px rgba(0,0,0,0.8) !important;
                 position: relative;
                 z-index: 2; 
-                /* TRUCO: Solo la imagen muerde la tarjeta hacia abajo, no toda la caja */
                 margin-bottom: -45px !important; 
             }
             
             /* TARJETA DEL PERFIL */
             .hero-card {
                 background: linear-gradient(135deg, #0C1E36, #06101E) !important;
-                /* Espacio superior extra para acomodar la mordida de la foto gigante */
                 padding: 60px 15px 20px 15px !important; 
                 border-radius: 18px !important;
                 border: 1px solid var(--border-gold) !important;
@@ -954,23 +935,21 @@
                 line-height: 1.25 !important;
                 text-align: center !important;
             }
+            /* Excepción para el texto de la tarjeta: este sí va justificado (alineado limpio) */
             .hero-card p {
-                font-size: 13.5px !important;
-                line-height: 1.45 !important;
-                text-align: center !important; 
-                color: var(--text-gray) !important;
+                line-height: 1.5 !important;
             }
             .hero-tag {
                 display: none !important;
             }
             
-            /* TÍTULO GANCHO (Ya no choca con nada) */
+            /* TÍTULO GANCHO CENTRADO (El cambio solicitado) */
             .hero h1 {
-                font-size: 23px !important; 
-                line-height: 1.2 !important;
+                font-size: 26px !important; /* Ligeramente más grande para lucir centrado */
+                line-height: 1.25 !important;
                 margin-top: 5px !important;
-                margin-bottom: 12px !important;
-                text-align: left !important;
+                margin-bottom: 15px !important;
+                text-align: center !important; /* CENTRADO AQUÍ */
             }
             
             .btn-group {
@@ -991,7 +970,7 @@
                 display: none !important;
             }
             
-            /* 2 & 3. GANCHO DE EMPATÍA (LETRAS GRANDES Y CENTRADAS) */
+            /* GANCHO DE EMPATÍA (LETRAS GRANDES Y CENTRADAS) */
             .mobile-empathy-card {
                 display: block !important;
                 background: var(--card-bg) !important;
@@ -1005,23 +984,22 @@
             }
             .mobile-empathy-card h3 {
                 font-family: "Playfair Display", serif !important;
-                font-size: 22px !important; /* Letras mucho más grandes */
+                font-size: 22px !important; 
                 color: var(--gold) !important;
                 line-height: 1.3 !important;
                 margin-bottom: 10px !important;
-                text-align: center !important; /* 100% Centrado */
+                text-align: center !important; 
             }
             .mobile-empathy-card p {
-                font-size: 15px !important; /* Descripción también creció */
                 line-height: 1.55 !important;
-                color: var(--white) !important;
-                text-align: center !important; /* 100% Centrado */
-                margin-bottom: 0 !important;
+                /* El párrafo va justificado por la regla universal que pusimos arriba */
             }
             
             .empathy-section {
                 display: none !important;
             }
+            
+            /* ÍCONOS DE CONFIANZA MÁS GRANDES */
             .hero-trust {
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 12px !important;
@@ -1029,14 +1007,14 @@
                 padding-top: 15px !important;
             }
             .hero-trust div {
-                font-size: 11px !important;
+                font-size: 13.5px !important; /* Textos de íconos más grandes */
             }
+            .hero-trust i {
+                font-size: 22px !important; /* Íconos un poco más grandes para acompañar */
+            }
+
             .practice-grid, .trust-grid, .process-grid {
                 grid-template-columns: 1fr;
-            }
-            p {
-                text-align: left !important;
-                font-size: 15px;
             }
         }
     </style>
@@ -1138,7 +1116,7 @@
                 </video>
             </div>
             <div class="empathy-list">
-                <small class="gold" style="letter-spacing: 3px; font-weight: 600; display: block; margin-bottom: 10px;">CONÓCENOS</small>
+                <small class="gold">CONÓCENOS</small>
                 <h2>Estamos para ayudarte.</h2>
                 <p>
                     En este breve mensaje te explicamos cómo podemos ayudarte y por qué cada caso es fundamental para nuestro despacho. Reducimos la ansiedad con respuestas directas y estrategias jurídicas reales.
@@ -1479,7 +1457,7 @@
                     <i class="fa-solid fa-phone"></i>
                     <div>
                         <strong>Teléfonos de Emergencia / WhatsApp</strong>
-                        <span>55 3238 2924 / 55 4046 4927</span>
+                        <span>55 3238 2924 / 55 2780 9449</span>
                     </div>
                 </div>
                 <div class="contact-box">
