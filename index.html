@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lic. Aurelio De La Cruz Anaya | Abogado Penalista | Anaya y Asociados</title>
     
+    <!-- Fuentes Google: Playfair Display (Elegancia) y Poppins (Modernidad) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
@@ -20,6 +22,7 @@
             --bg-light: #F8F9FA;      /* Gris perla muy limpio */
             --gold: #C39B54;          /* Dorado premium */
             --gold-light: #D4AF6E;
+            --gold-bright: #E5C380;   /* Dorado brillante para el gancho */
             --text-white: #FFFFFF;
             --text-dark: #1E293B;     /* Texto para fondos claros */
             --text-gray: #64748B;
@@ -49,7 +52,7 @@
             padding-bottom: 25px;
         }
 
-        /* Encabezado Top con Leyenda Solicitada */
+        /* Encabezado Top con Leyenda ANAYA Y ASOCIADOS (Limpio y Elegante) */
         .top-header {
             display: flex;
             justify-content: space-between;
@@ -72,15 +75,16 @@
         }
         .logo-text-single {
             font-family: var(--font-serif);
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 700;
             color: var(--text-white);
             letter-spacing: 1px;
             text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
         .menu-btn { color: var(--text-white); font-size: 24px; }
 
-        /* Imagen de Portada Despejada (2/3 de la foto visibles) */
+        /* Imagen de Portada Estándar */
         .hero-image {
             width: 100%;
             height: 380px;
@@ -94,7 +98,7 @@
             background: linear-gradient(to bottom, transparent 0%, var(--bg-dark) 100%);
         }
 
-        /* Contenido del Hero Recorrido hacia abajo */
+        /* Contenido del Hero */
         .hero-content {
             position: relative;
             z-index: 5;
@@ -117,19 +121,19 @@
         .btn-call { background: var(--btn-dark); color: white; border: 1px solid var(--gold); }
         .btn-gold { background: var(--gold); color: var(--bg-dark); font-weight: 700; }
 
-        /* GANCHO DE DESPLAZAMIENTO REFORZADO (Más Grande y en Negrita) */
+        /* GANCHO DE DESPLAZAMIENTO (Más Grande y en Oro Brillante) */
         .scroll-hook {
             margin-top: 15px;
             padding: 0 10px;
             text-align: center;
         }
         .scroll-hook p {
-            color: var(--gold-light);
-            font-size: 20px !important; /* TAMAÑO MAYOR SOLICITADO */
-            font-weight: 700 !important; /* MÁS GRANDE Y NEGRITA */
+            color: var(--gold-bright);
+            font-size: 18px;
+            font-weight: 700;
             line-height: 1.3;
             margin-bottom: 6px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.9);
             text-align: center !important;
         }
         .scroll-hook i {
@@ -243,12 +247,36 @@
         footer p { font-size: 13px; color: #94A3B8; text-align: center; }
         .footer-links { font-size: 11px; margin-top: 15px; color: #64748B; }
 
-        @media(max-width: 768px) {
+        /* ===========================================================
+           CORRECCIÓN PARA COMPUTADORA (Sin alterar el celular)
+        =========================================================== */
+        @media(min-width: 769px) {
             .hero-image {
-                height: 380px !important; /* Mantiene la proporción dorada de la foto */
+                max-width: 500px;
+                height: 500px !important;
+                margin: 0 auto;
+                border-radius: 0 0 24px 24px;
+                background-position: center top !important;
+                box-shadow: 0 20px 50px rgba(0,0,0,0.8);
             }
             .hero-content {
-                margin-top: 15px !important; /* Despeja completamente la foto */
+                max-width: 600px;
+                margin: 20px auto 0 !important;
+            }
+            .logo-text-single {
+                font-size: 22px !important;
+            }
+        }
+
+        /* ===========================================================
+           CORRECCIÓN PARA CELULAR: 2/3 de foto visibles + Gancho arriba
+        =========================================================== */
+        @media(max-width: 768px) {
+            .hero-image {
+                height: 320px !important; /* EXACTAMENTE 2/3 DE SU FIGURA (Rostro, hombros y corbata) */
+            }
+            .hero-content {
+                margin-top: -10px !important; /* Subimos los textos para que el gancho quepa arriba */
             }
             .hero-content h2 {
                 font-size: 26px !important; 
@@ -259,7 +287,7 @@
             }
             .hero-content .quote {
                 font-size: 13.5px !important;
-                margin-bottom: 15px !important;
+                margin-bottom: 12px !important;
                 line-height: 1.4 !important;
             }
             .btn-stack {
@@ -267,13 +295,13 @@
             }
             .btn {
                 padding: 13px !important; 
-                font-size: 14.5px !important;
+                font-size: 15px !important;
             }
             .scroll-hook {
-                margin-top: 15px !important; 
+                margin-top: 12px !important; 
             }
             .scroll-hook p {
-                font-size: 14.5px !important; 
+                font-size: 17.5px !important; /* GANCHO GRANDE, NEGRITA Y ORO BRILLANTE AL FRENTE */
             }
             p, .service-text, .trust-item p, .testimonial-card p {
                 font-size: 14.5px !important;
@@ -283,30 +311,33 @@
 </head>
 <body>
 
+    <!-- HERO SECTION -->
     <section class="hero">
         <header class="top-header">
+            <!-- ENCABEZADO LIMPIO: Logo + ANAYA Y ASOCIADOS EN BLANCO ELEGANTE -->
             <div class="logo-wrapper">
                 <img src="assets/img/logo-anaya.png" alt="Anaya y Asociados Logo" class="header-logo-img">
-                <div class="logo-text-box">
-                    <span class="logo-text-main">ANAYA Y ASOCIADOS</span>
-                    <span class="logo-text-sub">ABOGADOS</span>
-                </div>
+                <span class="logo-text-single">ANAYA Y ASOCIADOS</span>
             </div>
             <i class="fa-solid fa-bars menu-btn"></i>
         </header>
 
+        <!-- FOTO DESPEJADA: 2/3 visibles en celular, retrato centrado en PC -->
         <div class="hero-image"></div>
 
         <div class="hero-content">
-            <h2>Aurelio de la Cruz Anaya</h2>
+            <!-- NOMBRE EXACTO SOLICITADO -->
+            <h2>Aurelio De La Cruz Anaya</h2>
             <h3>Abogado Penalista y Litigante</h3>
             <p class="quote">“Protegiendo tu libertad, tus derechos y tu patrimonio cuando más lo necesitas.”</p>
 
+            <!-- EMBUDO DE CONTACTO DIRECTO -->
             <div class="btn-stack">
                 <a href="https://wa.me/525532382924?text=Hola%20Lic.%20Aurelio,%20necesito%20asesoría%20legal%20urgente" target="_blank" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
                 <a href="tel:5532382924" class="btn btn-call"><i class="fa-solid fa-phone"></i> Llamar ahora</a>
             </div>
 
+            <!-- GANCHO DE URGENCIA (MÁS GRANDE, NEGRITA Y ORO BRILLANTE) -->
             <div class="scroll-hook">
                 <p>¿Tienes un familiar detenido o te llegó un citatorio del Ministerio Público?</p>
                 <i class="fa-solid fa-chevron-down"></i>
@@ -314,6 +345,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: PROBLEMA PENAL -->
     <section class="section-light">
         <div class="container">
             <h2 class="section-title">¿Te enfrentas a un problema legal?</h2>
@@ -324,6 +356,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: SITUACIONES QUE ATENDEMOS -->
     <section class="section-light" style="padding-top: 0;">
         <div class="container">
             <p style="font-weight: 700; color: var(--text-gray); letter-spacing: 1px; text-align: center;">SITUACIONES QUE ATENDEMOS</p>
@@ -360,6 +393,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: POR QUÉ CONFIAR EN NOSOTROS -->
     <section class="section-light" style="padding-top: 0;">
         <div class="container">
             <h2 class="section-title" style="text-transform: uppercase; font-size: 24px;">¿Por qué confiar<br>en nosotros?</h2>
@@ -393,6 +427,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN OSCURA: PROCESO -->
     <section class="section-dark">
         <div class="container">
             <h2 class="section-title">Así es nuestro<br>proceso de trabajo</h2>
@@ -442,6 +477,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: TESTIMONIOS -->
     <section class="section-light">
         <div class="container">
             <h2 class="section-title" style="text-transform: uppercase; font-size: 22px;">Casos de éxito<br>y testimonios</h2>
@@ -459,6 +495,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: PREGUNTAS FRECUENTES -->
     <section class="section-light" style="padding-top:0;">
         <div class="container">
             <h2 class="section-title" style="text-transform: uppercase; font-size: 20px;">Preguntas Frecuentes</h2>
@@ -470,6 +507,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN FINAL: CONTACTO -->
     <section class="section-dark" id="contacto">
         <div class="container">
             <h2 class="section-title" style="text-align:left; text-transform:none; font-family: var(--font-serif); font-size:32px; margin-bottom: 15px;">Da el primer paso hoy.</h2>
@@ -506,19 +544,23 @@
 
             <a href="https://maps.google.com/?q=Prolongacion+Avenida+Central+Manzana+2+Lote+6+Llano+de+Morelos+I+Ecatepec" target="_blank" class="btn btn-call" style="margin-top:20px; width:100%; border-radius:8px;"><i class="fa-solid fa-location-dot"></i> Ver en Google Maps</a>
 
+            <!-- ENLACES REALES -->
             <h3 style="margin-top: 40px; color:var(--text-dark); font-size:18px;">OPINIONES Y COMUNIDAD</h3>
             <p style="font-size: 13.5px; color: var(--text-gray); margin-top: 5px;">Conoce la experiencia de quienes ya confiaron en nosotros:</p>
             
+            <!-- ENLACE DIRECTO A TUS OPINIONES -->
             <a href="https://www.facebook.com/AnayayAsociados/reviews" target="_blank" class="facebook-official-btn">
                 <i class="fa-brands fa-facebook-f" style="font-size: 18px;"></i> Ver opiniones reales en Facebook
             </a>
             
+            <!-- ENLACE A LA PÁGINA GENERAL -->
             <a href="https://www.facebook.com/AnayayAsociados/" target="_blank" class="facebook-sublink">
                 O visita nuestra página oficial de Facebook
             </a>
         </div>
     </section>
 
+    <!-- FOOTER CON LOGO OFICIAL -->
     <footer>
         <div class="container">
             <img src="assets/img/logo-anaya.png" alt="Anaya y Asociados Logo" class="footer-logo-img">
