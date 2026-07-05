@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lic. Aurelio De La Cruz Anaya | Abogado Penalista | Anaya y Asociados</title>
     
-    <!-- Fuentes Google: Playfair Display (Elegancia) y Poppins (Modernidad) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
@@ -37,6 +35,10 @@
 
         .container { width: 90%; max-width: 480px; margin: 0 auto; }
 
+        /* REGLA UNIVERSAL DE PÁRRAFOS: Justificado y limpio */
+        p { text-align: justify; text-justify: inter-word; font-size: 15px; color: var(--text-gray); line-height: 1.7; margin-bottom: 15px; }
+        p.center { text-align: center; }
+
         /* =========================================
            1. HERO SECTION (Tarjeta de Presentación)
         ========================================= */
@@ -44,10 +46,10 @@
             background-color: var(--bg-dark);
             color: var(--text-white);
             position: relative;
-            padding-bottom: 40px;
+            padding-bottom: 25px;
         }
 
-        /* Encabezado Top con Logo Oficial */
+        /* Encabezado Top con Leyenda Solicitada */
         .top-header {
             display: flex;
             justify-content: space-between;
@@ -56,86 +58,102 @@
             position: absolute;
             top: 0; left: 0; width: 100%;
             z-index: 10;
+            background: linear-gradient(to bottom, rgba(8,16,26,0.95) 0%, transparent 100%);
+        }
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
         .header-logo-img {
-            height: 55px;
+            height: 48px;
             width: auto;
             object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+        .logo-text-single {
+            font-family: var(--font-serif);
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-white);
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         .menu-btn { color: var(--text-white); font-size: 24px; }
 
-        /* Imagen Fundida (El efecto Revista) */
+        /* Imagen de Portada Despejada (2/3 de la foto visibles) */
         .hero-image {
             width: 100%;
-            height: 400px;
+            height: 380px;
             position: relative;
             background: url('assets/img/aurelio-anaya.webp') center top/cover no-repeat;
         }
         .hero-image::after {
             content: '';
             position: absolute;
-            bottom: 0; left: 0; width: 100%; height: 60%;
+            bottom: 0; left: 0; width: 100%; height: 50%;
             background: linear-gradient(to bottom, transparent 0%, var(--bg-dark) 100%);
         }
 
-        /* Contenido del Hero */
+        /* Contenido del Hero Recorrido hacia abajo */
         .hero-content {
             position: relative;
             z-index: 5;
             text-align: center;
-            margin-top: -40px;
+            margin-top: 15px;
+            padding: 0 12px;
         }
-        .hero-content h2 { font-family: var(--font-serif); font-size: 32px; font-weight: 700; margin-bottom: 5px; }
-        .hero-content h3 { color: var(--gold); font-size: 14px; font-weight: 600; letter-spacing: 2px; margin-bottom: 15px; }
-        .hero-content .quote { font-family: var(--font-serif); font-style: italic; font-size: 16px; color: #E2E8F0; margin-bottom: 25px; padding: 0 20px;}
+        .hero-content h2 { font-family: var(--font-serif); font-size: 28px; font-weight: 700; margin-bottom: 4px; text-shadow: 0 2px 4px rgba(0,0,0,0.6); }
+        .hero-content h3 { color: var(--gold); font-size: 13px; font-weight: 600; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase; }
+        .hero-content .quote { font-family: var(--font-serif); font-style: italic; font-size: 14.5px; color: #E2E8F0; margin-bottom: 15px; padding: 0 10px;}
 
-        /* Botones Principales */
-        .btn-stack { display: flex; flex-direction: column; gap: 12px; width: 90%; margin: 0 auto; }
+        /* Botones de Conversión */
+        .btn-stack { display: flex; flex-direction: column; gap: 8px; width: 95%; margin: 0 auto; }
         .btn {
             display: flex; justify-content: center; align-items: center; gap: 10px;
-            width: 100%; padding: 16px; border-radius: 12px; font-weight: 600; font-size: 16px;
+            width: 100%; padding: 14px; border-radius: 12px; font-weight: 600; font-size: 15px;
             text-decoration: none; transition: 0.3s; border: none; cursor: pointer;
         }
         .btn-wa { background: var(--whatsapp); color: white; box-shadow: 0 4px 15px rgba(30, 190, 86, 0.3); }
         .btn-call { background: var(--btn-dark); color: white; border: 1px solid var(--gold); }
+        .btn-gold { background: var(--gold); color: var(--bg-dark); font-weight: 700; }
 
-        /* GANCHO DE DESPLAZAMIENTO */
+        /* GANCHO DE DESPLAZAMIENTO REFORZADO (Más Grande y en Negrita) */
         .scroll-hook {
-            margin-top: 30px;
-            padding: 0 20px;
+            margin-top: 15px;
+            padding: 0 10px;
             text-align: center;
         }
         .scroll-hook p {
             color: var(--gold-light);
-            font-size: 16.5px;
-            font-weight: 600;
-            line-height: 1.4;
-            margin-bottom: 8px;
+            font-size: 20px !important; /* TAMAÑO MAYOR SOLICITADO */
+            font-weight: 700 !important; /* MÁS GRANDE Y NEGRITA */
+            line-height: 1.3;
+            margin-bottom: 6px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            text-align: center !important;
         }
         .scroll-hook i {
             color: var(--white);
-            font-size: 18px;
-            opacity: 0.7;
+            font-size: 16px;
+            opacity: 0.8;
             animation: bounce 2s infinite;
         }
 
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-6px);}
-            60% {transform: translateY(-3px);}
+            40% {transform: translateY(-5px);}
+            60% {transform: translateY(-2px);}
         }
 
         /* =========================================
-           2. SECCIÓN BLANCA (Problema Penal & Servicios)
+           2. SECCIÓN BLANCA (Problema Penal)
         ========================================= */
         .section-light { background: var(--bg-light); padding: 50px 0; }
         .section-title { font-family: var(--font-serif); font-size: 28px; color: var(--bg-dark); margin-bottom: 20px; line-height: 1.2; text-align: center;}
         .section-desc { font-size: 15px; color: var(--text-gray); margin-bottom: 25px; text-align: justify; }
         .bold-text { font-weight: 700; color: var(--bg-dark); }
 
-        /* Lista de Situaciones */
+        /* Lista de Especialidades */
         .service-list { list-style: none; margin-top: 30px; display: flex; flex-direction: column; gap: 20px;}
         .service-item { display: flex; align-items: center; gap: 18px; }
         .service-icon { 
@@ -192,7 +210,7 @@
         .faq-item i { color: var(--bg-dark); }
 
         /* =========================================
-           7. FORMULARIO, REDES Y FOOTER
+           7. ENLACES DE PRUEBA SOCIAL Y MAPA
         ========================================= */
         .form-container { margin-top: 30px; margin-bottom: 30px;}
         .input-field {
@@ -209,54 +227,71 @@
         .map-box iframe { width: 100%; height: 100%; border: none; filter: grayscale(100%); }
         .address { text-align: center; font-size: 14px; color: var(--text-dark); margin-bottom: 15px; }
         
-        /* Botón Oficial de Facebook y Enlace Secundario */
         .facebook-official-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: #1877F2; /* Color oficial Facebook */
-            color: white;
-            padding: 16px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 15px;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
-            margin-top: 15px;
-            width: 100%;
-            transition: 0.3s;
+            display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+            background: #1877F2; color: white; padding: 16px 28px; border-radius: 50px;
+            font-weight: 600; font-size: 15px; text-decoration: none;
+            box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3); margin-top: 15px; width: 100%; transition: 0.3s;
         }
         .facebook-official-btn:hover { background: #0D65D9; transform: translateY(-2px); }
         
-        .facebook-sublink {
-            display: block;
-            margin-top: 15px;
-            font-size: 13.5px;
-            color: var(--text-gray);
-            text-decoration: underline;
-            transition: 0.3s;
-        }
+        .facebook-sublink { display: block; margin-top: 15px; font-size: 13.5px; color: var(--text-gray); text-decoration: underline; transition: 0.3s; }
         .facebook-sublink:hover { color: var(--bg-dark); }
 
         footer { background: var(--bg-dark); color: white; text-align: center; padding: 50px 20px 40px; }
-        .footer-logo-img {
-            height: 80px;
-            width: auto;
-            object-fit: contain;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.8));
-        }
+        .footer-logo-img { height: 80px; width: auto; object-fit: contain; margin-bottom: 20px; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.8)); }
         footer p { font-size: 13px; color: #94A3B8; text-align: center; }
-        .footer-links { font-size: 11px; margin-top: 15px; color: #94A3B8; }
+        .footer-links { font-size: 11px; margin-top: 15px; color: #64748B; }
+
+        @media(max-width: 768px) {
+            .hero-image {
+                height: 380px !important; /* Mantiene la proporción dorada de la foto */
+            }
+            .hero-content {
+                margin-top: 15px !important; /* Despeja completamente la foto */
+            }
+            .hero-content h2 {
+                font-size: 26px !important; 
+                margin-bottom: 2px !important;
+            }
+            .hero-content h3 {
+                margin-bottom: 8px !important;
+            }
+            .hero-content .quote {
+                font-size: 13.5px !important;
+                margin-bottom: 15px !important;
+                line-height: 1.4 !important;
+            }
+            .btn-stack {
+                gap: 8px !important;
+            }
+            .btn {
+                padding: 13px !important; 
+                font-size: 14.5px !important;
+            }
+            .scroll-hook {
+                margin-top: 15px !important; 
+            }
+            .scroll-hook p {
+                font-size: 14.5px !important; 
+            }
+            p, .service-text, .trust-item p, .testimonial-card p {
+                font-size: 14.5px !important;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <header class="top-header">
-            <img src="assets/img/logo-anaya.png" alt="Anaya y Asociados Logo" class="header-logo-img">
+            <div class="logo-wrapper">
+                <img src="assets/img/logo-anaya.png" alt="Anaya y Asociados Logo" class="header-logo-img">
+                <div class="logo-text-box">
+                    <span class="logo-text-main">ANAYA Y ASOCIADOS</span>
+                    <span class="logo-text-sub">ABOGADOS</span>
+                </div>
+            </div>
             <i class="fa-solid fa-bars menu-btn"></i>
         </header>
 
@@ -264,11 +299,11 @@
 
         <div class="hero-content">
             <h2>Aurelio de la Cruz Anaya</h2>
-            <h3 class="gold">ABOGADO PENALISTA</h3>
-            <p class="quote">“Protegiendo tus derechos cuando más lo necesitas.”</p>
+            <h3>Abogado Penalista y Litigante</h3>
+            <p class="quote">“Protegiendo tu libertad, tus derechos y tu patrimonio cuando más lo necesitas.”</p>
 
             <div class="btn-stack">
-                <a href="https://wa.me/525532382924" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://wa.me/525532382924?text=Hola%20Lic.%20Aurelio,%20necesito%20asesoría%20legal%20urgente" target="_blank" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
                 <a href="tel:5532382924" class="btn btn-call"><i class="fa-solid fa-phone"></i> Llamar ahora</a>
             </div>
 
@@ -279,10 +314,9 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: PROBLEMA PENAL -->
     <section class="section-light">
         <div class="container">
-            <h2 class="section-title">¿Te enfrentas a un problema penal?</h2>
+            <h2 class="section-title">¿Te enfrentas a un problema legal?</h2>
             <p class="section-desc">Sabemos que este puede ser uno de los momentos más difíciles de tu vida. El miedo, la incertidumbre y las dudas son normales.</p>
             <p class="section-desc" style="text-align: center;"><span class="bold-text" style="font-size: 18px; color: var(--gold);">No estás solo.</span><br><strong style="color: var(--bg-dark);">Estamos aquí para ayudarte.</strong></p>
             
@@ -290,7 +324,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: SITUACIONES QUE ATENDEMOS -->
     <section class="section-light" style="padding-top: 0;">
         <div class="container">
             <p style="font-weight: 700; color: var(--text-gray); letter-spacing: 1px; text-align: center;">SITUACIONES QUE ATENDEMOS</p>
@@ -327,7 +360,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: POR QUÉ CONFIAR EN NOSOTROS -->
     <section class="section-light" style="padding-top: 0;">
         <div class="container">
             <h2 class="section-title" style="text-transform: uppercase; font-size: 24px;">¿Por qué confiar<br>en nosotros?</h2>
@@ -335,11 +367,11 @@
             <div class="trust-list">
                 <div class="trust-item">
                     <i class="fa-solid fa-award"></i>
-                    <p>Ex Fiscal con 18 años<br>de experiencia</p>
+                    <p>Especialistas con amplia trayectoria<br>en litigio estratégico</p>
                 </div>
                 <div class="trust-item">
                     <i class="fa-solid fa-user-tie"></i>
-                    <p>Especialistas en<br>derecho penal</p>
+                    <p>Atención jurídica integral<br>y personalizada</p>
                 </div>
                 <div class="trust-item">
                     <i class="fa-solid fa-chess-knight"></i>
@@ -361,7 +393,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN OSCURA: PROCESO -->
     <section class="section-dark">
         <div class="container">
             <h2 class="section-title">Así es nuestro<br>proceso de trabajo</h2>
@@ -372,7 +403,7 @@
                     <div class="process-icon"><i class="fa-solid fa-ear-listen"></i></div>
                     <div class="process-content">
                         <h4>Escuchamos tu caso</h4>
-                        <p>Te escuchamos con atención y sin juicios.</p>
+                        <p>Te escuchamos con atención, empatía y sin juicios complejos.</p>
                     </div>
                 </div>
                 <div class="process-item">
@@ -380,7 +411,7 @@
                     <div class="process-icon"><i class="fa-regular fa-file-lines"></i></div>
                     <div class="process-content">
                         <h4>Analizamos tu situación</h4>
-                        <p>Revisamos los detalles y evaluamos tus opciones legales.</p>
+                        <p>Revisamos minuciosamente el escenario y evaluamos tus opciones reales.</p>
                     </div>
                 </div>
                 <div class="process-item">
@@ -388,15 +419,15 @@
                     <div class="process-icon"><i class="fa-solid fa-chess"></i></div>
                     <div class="process-content">
                         <h4>Diseñamos la estrategia legal</h4>
-                        <p>Creamos una estrategia pensada en tu defensa y tranquilidad.</p>
+                        <p>Creamos una línea de defensa sólida pensada en tu total tranquilidad.</p>
                     </div>
                 </div>
                 <div class="process-item">
                     <div class="process-num">4</div>
                     <div class="process-icon"><i class="fa-solid fa-user-shield"></i></div>
                     <div class="process-content">
-                        <h4>Te representamos y defendemos tus derechos</h4>
-                        <p>Actuamos en tu nombre en cada etapa del proceso.</p>
+                        <h4>Te representamos formalmente</h4>
+                        <p>Actuamos con firmeza institucional ante juzgados, fiscalías o tribunals.</p>
                     </div>
                 </div>
                 <div class="process-item">
@@ -404,51 +435,41 @@
                     <div class="process-icon"><i class="fa-solid fa-list-check"></i></div>
                     <div class="process-content">
                         <h4>Te mantenemos informado</h4>
-                        <p>Siempre sabrás en qué va tu caso.</p>
+                        <p>Reportes claros en un lenguaje honesto y comprensible.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN: TESTIMONIOS -->
     <section class="section-light">
         <div class="container">
             <h2 class="section-title" style="text-transform: uppercase; font-size: 22px;">Casos de éxito<br>y testimonios</h2>
             <br>
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p>"Excelente abogado, me explicó todo desde el inicio y estuvo siempre pendiente de mi caso. Lo recomiendo 100%."</p>
+                <p>"Excelente representación, el Lic. Aurelio me explicó todo con peras y manzanas desde el inicio. Muy profesionales en la firma."</p>
                 <div class="client-name">— Cliente satisfecho</div>
             </div>
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p>"Atendieron a mi familiar con mucha profesionalidad y logramos el mejor resultado. Muy agradecido."</p>
-                <div class="client-name">— Cliente satisfecho</div>
-            </div>
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p>"Su experiencia y estrategia marcaron la diferencia en mi caso. Lo mejor fue su trato humano."</p>
+                <p>"Atendieron una urgencia penal de nuestra familia con rapidez, humanidad y absoluta discreción. Súper recomendados."</p>
                 <div class="client-name">— Cliente satisfecho</div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN: PREGUNTAS FRECUENTES -->
     <section class="section-light" style="padding-top:0;">
         <div class="container">
             <h2 class="section-title" style="text-transform: uppercase; font-size: 20px;">Preguntas Frecuentes</h2>
             
             <div class="faq-item">¿Me pueden detener sin una orden? <i class="fa-solid fa-chevron-down"></i></div>
             <div class="faq-item">¿Debo declarar sin un abogado? <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-item">¿Qué pasa si no me presento a una citación? <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-item">¿Qué pasa si soy inocente? <i class="fa-solid fa-chevron-down"></i></div>
+            <div class="faq-item">¿Qué pasa si soy inocente y me acusan? <i class="fa-solid fa-chevron-down"></i></div>
             <div class="faq-item">¿Qué es un amparo y cuándo procede? <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-item">¿Cuánto cuesta una consulta? <i class="fa-solid fa-chevron-down"></i></div>
         </div>
     </section>
 
-    <!-- SECCIÓN FINAL: CONTACTO -->
     <section class="section-dark" id="contacto">
         <div class="container">
             <h2 class="section-title" style="text-align:left; text-transform:none; font-family: var(--font-serif); font-size:32px; margin-bottom: 15px;">Da el primer paso hoy.</h2>
@@ -461,8 +482,9 @@
             </div>
 
             <div class="btn-stack">
-                <a href="https://wa.me/525532382924" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://wa.me/525532382924?text=Hola%20Lic.%20Aurelio,%20necesito%20asesoría%20legal%20urgente" target="_blank" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
                 <a href="tel:5532382924" class="btn btn-call"><i class="fa-solid fa-phone"></i> Llamar ahora</a>
+                <a href="https://wa.me/525532382924?text=Hola,%20deseo%20agendar%20una%20cita%20presencial" target="_blank" class="btn btn-gold"><i class="fa-regular fa-calendar-check"></i> Agendar una consulta</a>
             </div>
         </div>
     </section>
@@ -484,29 +506,25 @@
 
             <a href="https://maps.google.com/?q=Prolongacion+Avenida+Central+Manzana+2+Lote+6+Llano+de+Morelos+I+Ecatepec" target="_blank" class="btn btn-call" style="margin-top:20px; width:100%; border-radius:8px;"><i class="fa-solid fa-location-dot"></i> Ver en Google Maps</a>
 
-            <!-- REDES SOCIALES: Con tus enlaces reales programados -->
             <h3 style="margin-top: 40px; color:var(--text-dark); font-size:18px;">OPINIONES Y COMUNIDAD</h3>
             <p style="font-size: 13.5px; color: var(--text-gray); margin-top: 5px;">Conoce la experiencia de quienes ya confiaron en nosotros:</p>
             
-            <!-- ENLACE DIRECTO A TUS OPINIONES (CRUCIAL PARA VENTAS) -->
             <a href="https://www.facebook.com/AnayayAsociados/reviews" target="_blank" class="facebook-official-btn">
                 <i class="fa-brands fa-facebook-f" style="font-size: 18px;"></i> Ver opiniones reales en Facebook
             </a>
             
-            <!-- ENLACE A LA PÁGINA GENERAL -->
             <a href="https://www.facebook.com/AnayayAsociados/" target="_blank" class="facebook-sublink">
                 O visita nuestra página oficial de Facebook
             </a>
         </div>
     </section>
 
-    <!-- FOOTER CON TU LOGO OFICIAL -->
     <footer>
         <div class="container">
             <img src="assets/img/logo-anaya.png" alt="Anaya y Asociados Logo" class="footer-logo-img">
             <p>Todos los derechos reservados<br>Anaya y Asociados</p>
             <div class="footer-links">
-                Aviso de privacidad &nbsp;|&nbsp; Términos y condiciones
+                Aviso de privacidad  |  Términos y condiciones
             </div>
         </div>
     </footer>
